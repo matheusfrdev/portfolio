@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matheus Fraga — Front-end Developer</title>
+  <meta name="description" content="Matheus Fraga, front-end developer. Landing pages, dashboards e sistemas web com foco em performance e UI." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader-window">
+      <span class="loader-dot"></span>
+      <span class="loader-dot"></span>
+      <span class="loader-dot"></span>
+    </div>
+    <p class="loader-text">compilando<span class="loader-dots">...</span></p>
+  </div>
+
+  <div class="spotlight" aria-hidden="true"></div>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="#home" class="logo">
+      <span class="logo-bracket">&lt;</span>MF<span class="logo-bracket">/&gt;</span>
+    </a>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="#home" data-index="00">início</a>
+      <a href="#about" data-index="01">sobre</a>
+      <a href="#stack" data-index="02">stack</a>
+      <a href="#projects" data-index="03">projetos</a>
+      <a href="#contact" data-index="05">contato</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <a href="https://github.com/" target="_blank" rel="noopener" class="nav-btn">
+        <span class="nav-btn-dot"></span>
+        GitHub
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+
+      <div class="hero-left">
+        <p class="hero-tag"><span class="status-dot"></span>status: tomando um cafézinho ☕</p>
+
+        <h1>
+          Olá, eu sou o <span>Matheus!</span>
+        </h1>
+
+        
+
+        <p class="hero-description">
+          Front-end developer focado em landing pages, dashboards e sistemas web.
+          Do primeiro commit ao deploy, cuido de cada detalhe entre o design e o código.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">Ver projetos</a>
+          <a href="#contact" class="btn-secondary">$ contato --iniciar</a>
+        </div>
+
+      </div>
+
+      <div class="hero-right">
+        <div class="editor-window">
+          <div class="editor-titlebar">
+            <div class="editor-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="editor-filename">perfil.js</span>
+          </div>
+
+          <div class="editor-tabs">
+            <span class="editor-tab active">perfil.js</span>
+            <span class="editor-tab">sobre.md</span>
+            <span class="editor-tab">stack.json</span>
+          </div>
+
+          <div class="editor-body">
+            <div class="editor-gutter" aria-hidden="true">
+              <span>1</span><span>2</span><span>3</span><span>4</span>
+              <span>5</span><span>6</span><span>7</span><span>8</span>
+            </div>
+            <pre class="editor-code" aria-hidden="true"><code><span class="tok-kw">const</span> <span class="tok-var">dev</span> = {
+            <span class="tok-key">nome</span>: <span class="tok-str">'Matheus Fraga'</span>,
+            <span class="tok-key">cargo</span>: <span class="tok-str">'Front-end Developer'</span>,
+            <span class="tok-key">stack</span>: [<span class="tok-str">'HTML'</span>, <span class="tok-str">'CSS'</span>, <span class="tok-str">'JS'</span>],
+            <span class="tok-key">foco</span>: <span class="tok-str">'performance + UI'</span>,
+            <span class="tok-key">status</span>: <span class="typing-target"></span><span class="typing-cursor">|</span>
+            };</code></pre>
+          </div>
+
+          <div class="editor-statusbar">
+            <span><span class="branch-icon">⑂</span> main</span>
+            <span>UTF-8</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Sobre -->
+    <section id="about" class="about reveal">
+
+      <div class="section-header">
+        <p class="eyebrow">~/sobre/about.md</p>
+        <h2>Transformo ideias em produtos digitais</h2>
+      </div>
+
+      <div class="about-content">
+        <div class="about-card">
+          <span class="about-card-mark">01</span>
+          <p>
+            Desenvolvo landing pages, dashboards, sistemas web e interfaces modernas
+            com HTML, CSS, JavaScript e as ferramentas certas para cada projeto —
+            sem exagero técnico.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <span class="about-card-mark">02</span>
+          <p>
+            Meu objetivo é simples: experiências rápidas, bonitas e fáceis de usar.
+            Performance e usabilidade não são etapas separadas do design — fazem
+            parte dele desde o primeiro esboço.
+          </p>
+        </div>
+
+        
+      </div>
+
+    </section>
+
+    <!-- Stack -->
+    <section id="stack" class="stack reveal">
+
+      <div class="section-header">
+        <p class="eyebrow">~/stack/package.json</p>
+        <h2>Tecnologias que utilizo</h2>
+      </div>
+
+      <div class="stack-panel">
+        <div class="editor-titlebar stack-titlebar">
+          <div class="editor-dots"><span></span><span></span><span></span></div>
+          <span class="editor-filename">package.json</span>
+        </div>
+
+        <pre class="stack-code"><code>{
+  <span class="tok-key">"dependencies"</span>: {
+    <span class="tok-key">"html5"</span>: <span class="tok-str">"^5.0.0"</span>,
+    <span class="tok-key">"css3"</span>: <span class="tok-str">"^3.0.0"</span>,
+    <span class="tok-key">"javascript"</span>: <span class="tok-str">"ES2023"</span>,
+    <span class="tok-key">"git"</span>: <span class="tok-str">"^2.44.0"</span>,
+    <span class="tok-key">"github"</span>: <span class="tok-str">"latest"</span>,
+    <span class="tok-key">"vercel"</span>: <span class="tok-str">"latest"</span>,
+    <span class="tok-key">"supabase"</span>: <span class="tok-str">"^2.0.0"</span>,
+    <span class="tok-key">"figma"</span>: <span class="tok-str">"design"</span>
+  }
+}</code></pre>
+      </div>
+
+    </section>
+
+    <!-- Projetos -->
+    <section id="projects" class="projects reveal">
+
+      <div class="section-header">
+        <p class="eyebrow">~/projetos/</p>
+        <h2>Projetos em destaque</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card">
+          <div class="project-titlebar">
+            <div class="editor-dots"><span></span><span></span><span></span></div>
+            <span class="editor-filename">nortiva/</span>
+          </div>
+
+          <div class="project-content">
+            <h3>Nortiva</h3>
+
+            <p>
+              Plataforma para desenvolvimento web, identidade visual
+              e soluções digitais sob medida.
+            </p>
+
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+
+            <a href="https://github.com/Nortiva" class="project-link">$ abrir --projeto</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-titlebar">
+            <div class="editor-dots"><span></span><span></span><span></span></div>
+            <span class="editor-filename">nortiva-studio/</span>
+          </div>
+
+          <div class="project-content">
+            <h3>Nortiva Studio</h3>
+
+            <p>
+              Organização criada para centralizar, documentar e apresentar projetos
+              desenvolvidos pela Nortiva.
+            </p>
+
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>JavaScript</span>
+            </div>
+
+            <a href="https://github.com/Nortiva-Studio" class="project-link">$ abrir --projeto</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-titlebar">
+            <div class="editor-dots"><span></span><span></span><span></span></div>
+            <span class="editor-filename">nortiva-cloud/</span>
+          </div>
+
+          <div class="project-content">
+            <h3>Nortiva Cloud</h3>
+
+            <p>
+              Plataforma de hospedagem com desempenho, segurança e alta disponibilidade para seus projetos.
+            </p>
+
+            <div class="project-tags">
+              <span>React</span>
+              <span>Cloud</span>
+              <span>API</span>
+            </div>
+
+            <a href="https://github.com/Nortiva-Cloud" class="project-link">$ abrir --projeto</a>
+          </div>
+        </article>
+
+
+        <article class="project-card">
+          <div class="project-titlebar">
+            <div class="editor-dots"><span></span><span></span><span></span></div>
+            <span class="editor-filename">nortiva-pay/</span>
+          </div>
+
+          <div class="project-content">
+            <h3>Nortiva Pay</h3>
+
+            <p>
+              Sistema de pagamentos com painel administrativo,
+              geração de cobranças e integração online.
+            </p>
+
+            <div class="project-tags">
+              <span>JavaScript</span>
+              <span>Supabase</span>
+              <span>Vercel</span>
+            </div>
+
+            <a href="https://github.com/Nortiva/Gateway" class="project-link">$ abrir --projeto</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-titlebar">
+            <div class="editor-dots"><span></span><span></span><span></span></div>
+            <span class="editor-filename">pato-devs/</span>
+          </div>
+
+          <div class="project-content">
+            <h3>PatoDevs</h3>
+
+            <p>
+              Comunidade de desenvolvedores que compartilham conhecimento,
+              dicas e experiências sobre programação e tecnologia.
+            </p>
+
+            <div class="project-tags">
+              <span>Comunidade</span>
+            </div>
+
+            <a href="https://github.com/PatoDevs" class="project-link">$ abrir --projeto</a>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+   
+
+    <!-- Contato -->
+    <section id="contact" class="contact reveal">
+
+      <div class="contact-box">
+
+        <div class="contact-heading">
+          <p class="eyebrow">~/contato $ ./enviar.sh</p>
+          <h2>Vamos criar algo juntos?</h2>
+          <p class="contact-sub">Responder rápido é prioridade — me chama por qualquer um dos canais abaixo.</p>
+        </div>
+
+        <div class="contact-links">
+          <button class="contact-link" id="copy-email" data-email="matheusfrdev@gmail.com" type="button">
+            <span class="contact-link-label">email</span>
+            <span class="contact-link-value" id="email-value">matheusfrdev@gmail.com</span>
+          </button>
+
+          <a href="https://github.com/matheusfrdev" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link-label">github</span>
+            <span class="contact-link-value">--visit</span>
+          </a>
+
+          <a href="https://linkedin.com/in/matheusfrdev" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link-label">linkedin</span>
+            <span class="contact-link-value">--connect</span>
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p> © 2026 -  Matheus Fraga </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
