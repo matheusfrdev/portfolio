@@ -1,5 +1,5 @@
 /*=====================================
-  TOKENS
+  MATHEUS FRAGA PORTFOLIO
 ======================================*/
 :root{
     --bg:#0A0E14;
@@ -895,5 +895,148 @@ section{
     /* Classe ativada via JavaScript para abrir o menu */
     .nav-links.active {
         transform: translateY(0);
+    }
+}
+
+/* =========================================
+   EDITOR — RESPONSIVIDADE MOBILE
+========================================= */
+
+@media (max-width: 768px){
+
+    .editor-window{
+        width: 100%;
+        border-radius: 13px;
+    }
+
+    .editor-titlebar{
+        padding: 13px 15px;
+        gap: 11px;
+    }
+
+    .editor-dots{
+        gap: 6px;
+    }
+
+    .editor-dots span{
+        width: 9px;
+        height: 9px;
+    }
+
+    .editor-filename{
+        font-size: 11.5px;
+    }
+
+
+    /* Tabs */
+    .editor-tabs{
+        overflow-x: auto;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .editor-tabs::-webkit-scrollbar{
+        display: none;
+    }
+
+    .editor-tab{
+        flex-shrink: 0;
+        font-size: 11.5px;
+        padding: 10px 14px;
+    }
+
+
+    /* Código */
+    .editor-body{
+        padding: 21px 0;
+        font-size: 12.5px;
+        line-height: 1.8;
+        overflow: hidden;
+    }
+
+    .editor-gutter{
+        flex-shrink: 0;
+        padding: 0 12px;
+        font-size: 10.5px;
+    }
+
+    .editor-code{
+        min-width: 0;
+        padding: 0 17px 0 5px;
+        overflow-x: auto;
+        font-size: 12.5px;
+        line-height: 1.8;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+
+
+    /* Status bar */
+    .editor-statusbar{
+        gap: 14px;
+        padding: 9px 14px;
+        font-size: 10.5px;
+
+        overflow-x: auto;
+        white-space: nowrap;
+
+        scrollbar-width: none;
+    }
+
+    .editor-statusbar::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+
+/* =========================================
+   CELULARES PEQUENOS
+========================================= */
+
+@media (max-width: 480px){
+
+    .editor-window{
+        border-radius: 11px;
+    }
+
+    .editor-titlebar{
+        padding: 11px 13px;
+    }
+
+    .editor-dots span{
+        width: 8px;
+        height: 8px;
+    }
+
+    .editor-filename{
+        font-size: 10.5px;
+    }
+
+    .editor-tab{
+        font-size: 10.5px;
+        padding: 9px 12px;
+    }
+
+    .editor-body{
+        padding: 18px 0;
+        font-size: 11.5px;
+        line-height: 1.75;
+    }
+
+    .editor-gutter{
+        padding: 0 9px;
+        font-size: 9.5px;
+    }
+
+    .editor-code{
+        padding-right: 14px;
+        font-size: 11.5px;
+        line-height: 1.75;
+    }
+
+    .editor-statusbar{
+        font-size: 9.5px;
+        gap: 11px;
+        padding: 8px 11px;
     }
 }
