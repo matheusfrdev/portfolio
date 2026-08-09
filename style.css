@@ -1,5 +1,5 @@
 /* ========================================
-   matheus é gostoso tá?
+   matheus é um gostosão tá??
 ======================================== */
 
 *,
@@ -113,6 +113,36 @@ body{
   outline-offset:3px;
 
   border-radius:4px;
+}
+
+/* ========================================
+   BARRA DE ROLAGEM
+======================================== */
+
+html{
+  scrollbar-width:thin;
+
+  scrollbar-color:var(--green) var(--bg-secondary);
+}
+
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-track{
+  background:var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb{
+  background:linear-gradient(180deg, var(--green), #3FA84F);
+
+  border-radius:100px;
+
+  border:2px solid var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background:#84EA8F;
 }
 
 /* ========================================
