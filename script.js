@@ -1,7 +1,7 @@
 /* ==================================================
-   MATHEUS FRAGA — PORTFÓLIO
-   Menu mobile, header no scroll, seção ativa,
-   animações de entrada e navegação suave.
+
+  meu sonho é desenhar BUS no rio de janeiro
+
 ================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -93,6 +93,20 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     fadeEls.forEach((el) => el.classList.add('is-visible'));
   }
+
+  /* ---------- Botão flutuante — voltar ao topo ---------- */
+  const backToTop = document.getElementById('backToTop');
+
+  const updateBackToTop = () => {
+    backToTop.classList.toggle('is-visible', window.scrollY > 480);
+  };
+
+  updateBackToTop();
+  window.addEventListener('scroll', updateBackToTop, { passive: true });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
   /* ---------- Brilho que acompanha o cursor no background ---------- */
   const cursorGlow = document.getElementById('cursorGlow');
