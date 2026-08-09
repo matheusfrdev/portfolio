@@ -1,331 +1,413 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Matheus Fraga — Front-end Developer</title>
-  <meta name="description" content="Matheus Fraga, front-end developer. Landing pages, dashboards e sistemas web com foco em performance e UI." />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matheus Fraga — Desenvolvedor Full Stack</title>
+  <meta name="description" content="Portfólio pessoal de Matheus Fraga, desenvolvedor Full Stack de 17 anos. Projetos, stack e contato.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- Loader -->
-  <div class="loader" aria-hidden="true">
-    <div class="loader-window">
-      <span class="loader-dot"></span>
-      <span class="loader-dot"></span>
-      <span class="loader-dot"></span>
-    </div>
-    <p class="loader-text">compilando<span class="loader-dots">...</span></p>
-  </div>
+  <!-- ==================================================
+       BACKGROUND DECORATIVO
+  ================================================== -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
-  <div class="spotlight" aria-hidden="true"></div>
-  <div class="grid-bg" aria-hidden="true"></div>
+  <!-- ==================================================
+       HEADER
+  ================================================== -->
+  <header class="header" id="header">
+    <div class="header__inner">
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <a href="#home" class="logo">
-      <span class="logo-bracket">&lt;</span>MF<span class="logo-bracket">/&gt;</span>
-    </a>
-
-    <nav class="nav-links" id="nav-links">
-      <a href="#home" data-index="00">início</a>
-      <a href="#about" data-index="01">sobre</a>
-      <a href="#stack" data-index="02">stack</a>
-      <a href="#projects" data-index="03">projetos</a>
-      <a href="#contact" data-index="05">contato</a>
-    </nav>
-
-    <div class="navbar-actions">
-      <a href="https://github.com/matheusfrdev" target="_blank" rel="noopener" class="nav-btn">
-        <span class="nav-btn-dot"></span>
-        GitHub
+      <a href="#inicio" class="logo" aria-label="Matheus Fraga, ir para o início">
+        <span class="logo__bracket">&lt;</span><span class="logo__text">MF</span><span class="logo__bracket">/&gt;</span>
       </a>
 
-      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link is-active" data-nav="inicio"><span class="nav__num">01</span> início</a></li>
+          <li><a href="#sobre" class="nav__link" data-nav="sobre"><span class="nav__num">02</span> sobre</a></li>
+          <li><a href="#stack" class="nav__link" data-nav="stack"><span class="nav__num">03</span> stack</a></li>
+          <li><a href="#projetos" class="nav__link" data-nav="projetos"><span class="nav__num">04</span> projetos</a></li>
+          <li><a href="#contato" class="nav__link" data-nav="contato"><span class="nav__num">05</span> contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="https://github.com/SEU_USUARIO" target="_blank" rel="noopener noreferrer" class="btn btn--github">
+          <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 6.58 2 12.25C2 16.78 4.87 20.62 8.84 21.98C9.34 22.07 9.52 21.76 9.52 21.49C9.52 21.25 9.51 20.44 9.51 19.58C7 20.09 6.35 18.99 6.15 18.42C6.04 18.13 5.55 17.22 5.12 16.98C4.77 16.79 4.27 16.28 5.11 16.27C5.9 16.26 6.46 17.01 6.65 17.31C7.55 18.83 8.98 18.4 9.55 18.14C9.64 17.47 9.91 17.02 10.2 16.76C7.95 16.5 5.6 15.62 5.6 11.71C5.6 10.6 5.99 9.68 6.67 8.96C6.56 8.7 6.21 7.65 6.77 6.23C6.77 6.23 7.65 5.95 9.52 7.22C10.31 7 11.15 6.89 12 6.89C12.85 6.89 13.69 7 14.48 7.22C16.35 5.94 17.23 6.23 17.23 6.23C17.79 7.65 17.44 8.7 17.33 8.96C18.01 9.68 18.4 10.59 18.4 11.71C18.4 15.63 16.04 16.5 13.79 16.76C14.15 17.08 14.47 17.7 14.47 18.65C14.47 20 14.46 21.15 14.46 21.49C14.46 21.76 14.64 22.08 15.14 21.98C17.1279 21.2917 18.8464 20.0034 20.0673 18.293C21.2881 16.5826 21.9459 14.5387 21.95 12.44C21.95 6.58 17.47 2 12 2Z" fill="currentColor"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg class="icon icon--menu" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M3 6H21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M3 12H21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M3 18H21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <svg class="icon icon--close" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 6L18 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="mobile-menu__list">
+        <li><a href="#inicio" data-nav="inicio"><span class="nav__num">01</span> início</a></li>
+        <li><a href="#sobre" data-nav="sobre"><span class="nav__num">02</span> sobre</a></li>
+        <li><a href="#stack" data-nav="stack"><span class="nav__num">03</span> stack</a></li>
+        <li><a href="#projetos" data-nav="projetos"><span class="nav__num">04</span> projetos</a></li>
+        <li><a href="#contato" data-nav="contato"><span class="nav__num">05</span> contato</a></li>
+      </ul>
+      <a href="https://github.com/SEU_USUARIO" target="_blank" rel="noopener noreferrer" class="btn btn--github btn--block">
+        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 2C6.48 2 2 6.58 2 12.25C2 16.78 4.87 20.62 8.84 21.98C9.34 22.07 9.52 21.76 9.52 21.49C9.52 21.25 9.51 20.44 9.51 19.58C7 20.09 6.35 18.99 6.15 18.42C6.04 18.13 5.55 17.22 5.12 16.98C4.77 16.79 4.27 16.28 5.11 16.27C5.9 16.26 6.46 17.01 6.65 17.31C7.55 18.83 8.98 18.4 9.55 18.14C9.64 17.47 9.91 17.02 10.2 16.76C7.95 16.5 5.6 15.62 5.6 11.71C5.6 10.6 5.99 9.68 6.67 8.96C6.56 8.7 6.21 7.65 6.77 6.23C6.77 6.23 7.65 5.95 9.52 7.22C10.31 7 11.15 6.89 12 6.89C12.85 6.89 13.69 7 14.48 7.22C16.35 5.94 17.23 6.23 17.23 6.23C17.79 7.65 17.44 8.7 17.33 8.96C18.01 9.68 18.4 10.59 18.4 11.71C18.4 15.63 16.04 16.5 13.79 16.76C14.15 17.08 14.47 17.7 14.47 18.65C14.47 20 14.46 21.15 14.46 21.49C14.46 21.76 14.64 22.08 15.14 21.98C17.1279 21.2917 18.8464 20.0034 20.0673 18.293C21.2881 16.5826 21.9459 14.5387 21.95 12.44C21.95 6.58 17.47 2 12 2Z" fill="currentColor"/>
+        </svg>
+        <span>GitHub</span>
+      </a>
     </div>
   </header>
 
   <main>
 
-    <!-- Hero -->
-    <section id="home" class="hero">
-      
-      <div class="hero-left">
-        <p class="hero-tag"><span class="status-dot"></span>status: tomando um cafézinho ☕</p>
+    <!-- ==================================================
+         HERO
+    ================================================== -->
+    <section class="hero" id="inicio">
+      <div class="container hero__inner">
 
-        <h1>
-          Olá, eu sou o <span>Matheus!</span>
+        <div class="status-badge fade-up">
+          <span class="status-badge__dot"></span>
+          <span>status: tomando um cafezinho</span>
+          <span class="status-badge__emoji" role="img" aria-label="xícara de café">&#9749;</span>
+        </div>
+
+        <h1 class="hero__title fade-up delay-1">
+          Olá, eu sou o<br>
+          <span class="hero__name">Matheus!</span>
         </h1>
 
-        
-
-        <p class="hero-description">
-        Desenvolvedor Full Stack de 17 anos focado em constante evolução.
-        Do primeiro commit ao deploy, busco evoluir minhas habilidades práticas cuidando de cada detalhe entre o design e o código.  
+        <p class="hero__desc fade-up delay-2">
+          Desenvolvedor Full Stack de 17 anos focado em constante evolução. Do primeiro commit ao deploy, busco evoluir minhas habilidades práticas cuidando de cada detalhe entre o design e o código.
         </p>
 
-        <div class="hero-actions">
-          <a href="#projects" class="btn-primary">Ver projetos</a>
-          <a href="#contact" class="btn-secondary">$ contato --iniciar</a>
+        <div class="hero__actions fade-up delay-3">
+          <a href="#projetos" class="btn btn--primary">
+            Ver projetos
+            <svg class="icon icon--sm" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12H19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#contato" class="btn btn--terminal">
+            <span class="btn--terminal__prompt">$</span> contato --iniciar
+          </a>
         </div>
 
       </div>
+    </section>
 
-      <div class="hero-right">
-        <div class="editor-window">
-          <div class="editor-titlebar">
-            <div class="editor-dots">
-              <span></span><span></span><span></span>
+    <!-- ==================================================
+         SOBRE
+    ================================================== -->
+    <section class="about" id="sobre">
+      <div class="container">
+
+        <div class="section-head fade-up">
+          <span class="section-head__eyebrow"><span class="section-head__num">02</span> Sobre mim</span>
+          <h2 class="section-head__title">Código, design e curiosidade.</h2>
+        </div>
+
+        <div class="about__grid">
+
+          <div class="about__text fade-up">
+            <p>Tenho 17 anos e venho construindo minha jornada como Desenvolvedor Full Stack. Gosto de transformar ideias em projetos reais, aprender na prática e evoluir um pouco mais a cada projeto que desenvolvo.</p>
+
+            <p>Atualmente estudo e trabalho com tecnologias voltadas para a web, explorando Front-end, Back-end, bancos de dados, APIs e ferramentas que me ajudam a criar aplicações cada vez mais completas.</p>
+
+            <p>Quando não estou programando, gosto de aproveitar meu tempo com coisas que fazem parte da minha rotina: jogar basquete, tomar um bom café, jogar CS e ouvir pagode ou trap. São momentos que ajudam a desligar um pouco da tela e recarregar as ideias.</p>
+          </div>
+
+          <div class="about__stats fade-up delay-1">
+            <div class="stat-card">
+              <span class="stat-card__value">17</span>
+              <span class="stat-card__label">Anos</span>
             </div>
-            <span class="editor-filename">perfil.js</span>
-          </div>
-
-          <div class="editor-tabs">
-            <span class="editor-tab active">perfil.js</span>
-            <span class="editor-tab">sobre.md</span>
-            <span class="editor-tab">stack.json</span>
-          </div>
-
-          <div class="editor-body">
-            <div class="editor-gutter" aria-hidden="true">
-              <span>1</span><span>2</span><span>3</span><span>4</span>
-              <span>5</span><span>6</span><span>7</span><span>8</span>
+            <div class="stat-card">
+              <span class="stat-card__value">Full Stack</span>
+              <span class="stat-card__label">Área principal</span>
             </div>
-            <pre class="editor-code" aria-hidden="true"><code><span class="tok-kw">const</span> <span class="tok-var">dev</span> = {
-            <span class="tok-key">nome</span>: <span class="tok-str">'Matheus Fraga'</span>,
-            <span class="tok-key">cargo</span>: <span class="tok-str">'Full-stack Developer'</span>,
-            <span class="tok-key">stack</span>: [<span class="tok-str">'HTML'</span>, <span class="tok-str">'CSS'</span>, <span class="tok-str">'JS'</span>, <span class="tok-str">'React'</span>],
-            <span class="tok-key">foco</span>: <span class="tok-str">'performance + UI'</span>,
-            <span class="tok-key">status</span>: <span class="typing-target"></span><span class="typing-cursor">|</span>
-            };</code></pre>
+            <div class="stat-card">
+              <span class="stat-card__value">Typescript</span>
+              <span class="stat-card__label">Foco atual</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-card__value">&#8734;</span>
+              <span class="stat-card__label">Evolução constante</span>
+            </div>
           </div>
 
-          <div class="editor-statusbar">
-            <span><span class="branch-icon">⑂</span> main</span>
-            <span>UTF-8</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         STACK
+    ================================================== -->
+    <section class="stack" id="stack">
+      <div class="container">
+
+        <div class="section-head fade-up">
+          <span class="section-head__eyebrow"><span class="section-head__num">03</span> Stack</span>
+          <h2 class="section-head__title">Ferramentas que uso.</h2>
+          <p class="section-head__desc">Tecnologias que estudo e utilizo para transformar ideias em aplicações reais, do front-end ao back-end.</p>
+        </div>
+
+        <div class="stack__grid fade-up delay-1">
+
+          <div class="tech-card">
+            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 3L5.7 21L12 22.8L18.3 21L20 3H4Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M16.5 7.5H8L8.3 11H16.2L15.7 16.5L12 17.5L8.3 16.5L8.1 14" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            <span>HTML5</span>
+          </div>
+
+          <div class="tech-card">
+            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 3L5.7 21L12 22.8L18.3 21L20 3H4Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M15.5 8H8.2L8.5 11H15.2L14.8 16.3L12 17.2L9.2 16.3L9 14.3" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            <span>CSS3</span>
+          </div>
+
+          <div class="tech-card">
+            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M8 15.5C8 16.5 8.6 17 9.5 17C10.4 17 11 16.4 11 15.3V9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M13 15C13 16.2 14 17 15.2 17C16.4 17 17 16.4 17 15.5C17 12.8 13 14 13 11.5C13 10.6 13.7 10 14.8 10C15.9 10 16.5 10.6 16.6 11.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
             <span>JavaScript</span>
           </div>
+
+          <div class="tech-card">
+            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C9 2 9 4 9 4V7H12H15V8H8C8 8 5 8 5 12C5 16 8 15.5 8 15.5H9.5V13.5C9.5 13.5 9.4 11 12 11H15C15 11 17.5 11 17.5 8.5V5C17.5 5 17.8 2 12 2Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M12 22C15 22 15 20 15 20V17H12H9V16H16C16 16 19 16 19 12C19 8 16 8.5 16 8.5H14.5V10.5C14.5 10.5 14.6 13 12 13H9C9 13 6.5 13 6.5 15.5V19C6.5 19 6.2 22 12 22Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><circle cx="10.5" cy="4.5" r="0.6" fill="currentColor"/><circle cx="13.5" cy="19.5" r="0.6" fill="currentColor"/></svg>
+            <span>Python</span>
+          </div>
+
+          <div class="tech-card">
+            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L20 6.5V17.5L12 22L4 17.5V6.5L12 2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M9 9.5C9 9.5 10 8.5 12 8.5C14 8.5 15 9.5 15 9.5V13C15 13 14 15.5 12 15.5C10 15.5 9 13 9 13V9.5Z" stroke="currentColor" stroke-width="1.1"/></svg>
+            <span>Node.js</span>
+          </div>
+
+          <div class="tech-card">
+            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 3H7C6 3 5.5 3.7 6.2 4.6L11 11H5C4 11 3.7 11.7 4.4 12.5L13 21L12 13H18C19 13 19.3 12.3 18.7 11.5L15 3Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            <span>Supabase</span>
+          </div>
+
+          <div class="tech-card">
+            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="6" r="1.6" stroke="currentColor" stroke-width="1.2"/><circle cx="7" cy="15" r="1.6" stroke="currentColor" stroke-width="1.2"/><circle cx="17" cy="15" r="1.6" stroke="currentColor" stroke-width="1.2"/><path d="M12 7.6V11M10.6 15.7L12 12M13.4 15.7L12 12" stroke="currentColor" stroke-width="1.2"/></svg>
+            <span>Git</span>
+          </div>
+
+          <div class="tech-card">
+            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C6.5 2 2 6.6 2 12.3C2 16.8 4.9 20.6 8.9 22C9.4 22.1 9.5 21.8 9.5 21.5V19.6C6.7 20.2 6.1 18.2 6.1 18.2C5.7 17.1 5.1 16.8 5.1 16.8C4.2 16.2 5.2 16.2 5.2 16.2C6.2 16.3 6.7 17.3 6.7 17.3C7.6 18.8 9 18.4 9.6 18.1C9.7 17.5 9.9 17 10.2 16.8C7.9 16.5 5.6 15.6 5.6 11.7C5.6 10.6 6 9.7 6.7 9C6.6 8.7 6.2 7.7 6.8 6.2C6.8 6.2 7.7 5.9 9.5 7.2C10.3 7 11.2 6.9 12 6.9C12.8 6.9 13.7 7 14.5 7.2C16.3 5.9 17.2 6.2 17.2 6.2C17.8 7.7 17.4 8.7 17.3 9C18 9.7 18.4 10.6 18.4 11.7C18.4 15.6 16.1 16.5 13.8 16.8C14.2 17.1 14.5 17.7 14.5 18.6V21.5C14.5 21.8 14.7 22.1 15.2 22C19.1 20.6 22 16.8 22 12.3C22 6.6 17.5 2 12 2Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+            <span>GitHub</span>
+          </div>
+
+          <div class="tech-card">
+            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 3H5C3.9 3 3 3.9 3 5V9M15 3H19C20.1 3 21 3.9 21 5V9M9 21H5C3.9 21 3 20.1 3 19V15M15 21H19C20.1 21 21 20.1 21 19V15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 12H16M8 12L10.5 9.5M8 12L10.5 14.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>APIs</span>
+          </div>
+
+          <div class="tech-card">
+            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M3 8.5H21" stroke="currentColor" stroke-width="1.3"/><circle cx="6" cy="6.2" r="0.6" fill="currentColor"/><path d="M8 21H16" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+            <span>UI / UX</span>
+          </div>
+
         </div>
       </div>
-
     </section>
 
+    <!-- ==================================================
+         PROJETOS
+    ================================================== -->
+    <section class="projects" id="projetos">
+      <div class="container">
 
-    
-    <!-- Sobre -->
-    <section id="about" class="about reveal">
-
-      <div class="section-header">
-        <p class="eyebrow">~/sobre/about.md</p>
-        <h2>Um pouco da minha vida!</h2>
-      </div>
-
-
-    <div class="about-content">
-
-      <div class="about-card">
-        <span class="about-card-mark">01</span>
-        <p>
-          Tenho 17 anos e venho construindo minha jornada como Desenvolvedor
-          Full Stack. Gosto de transformar ideias em projetos reais, aprender
-          na prática e evoluir um pouco mais a cada projeto que desenvolvo.
-        </p>
-      </div>
-
-      <div class="about-card">
-        <span class="about-card-mark">02</span>
-        <p>
-          Do primeiro commit ao deploy, procuro entender o projeto como um todo.
-          Me preocupo tanto com o código quanto com o design, a experiência do
-          usuário, a performance e os pequenos detalhes que fazem diferença.
-        </p>
-      </div>
-
-      <div class="about-card">
-        <span class="about-card-mark">03</span>
-        <p>
-          Atualmente estudo e trabalho com tecnologias voltadas para a web,
-          explorando Front-end, Back-end, bancos de dados, APIs e ferramentas
-          que me ajudam a criar aplicações cada vez mais completas.
-        </p>
-      </div>
-
-    <div class="about-card">
-      <span class="about-card-mark">04</span>
-      <p>
-        Quando não estou programando, gosto de aproveitar meu tempo com coisas
-        que fazem parte da minha rotina: jogar basquete, tomar um bom café,
-        jogar CS e ouvir pagode ou trap. São momentos que ajudam a desligar um
-        pouco da tela e recarregar as ideias.
-      </p>
-    </div>
-        
-      </div>
-
-    </section>
-
-    <!-- Stack -->
-    <section id="stack" class="stack reveal">
-
-      <div class="section-header">
-        <p class="eyebrow">~/stack/package.json</p>
-        <h2>Tecnologias que utilizo</h2>
-      </div>
-
-      <div class="stack-panel">
-        <div class="editor-titlebar stack-titlebar">
-          <div class="editor-dots"><span></span><span></span><span></span></div>
-          <span class="editor-filename">package.json</span>
+        <div class="section-head fade-up">
+          <span class="section-head__eyebrow"><span class="section-head__num">04</span> Projetos</span>
+          <h2 class="section-head__title">Coisas que eu construí.</h2>
+          <p class="section-head__desc">Projetos pessoais, experimentos e aplicações desenvolvidas para aprender, testar ideias e transformar conceitos em produtos reais.</p>
         </div>
 
-        <pre class="stack-code"><code>{
-  <span class="tok-key">"dependencies"</span>: {
-    <span class="tok-key">"html5"</span>: <span class="tok-str">"^5.0.0"</span>,
-    <span class="tok-key">"css3"</span>: <span class="tok-str">"^3.0.0"</span>,
-    <span class="tok-key">"javascript"</span>: <span class="tok-str">"ES2023"</span>,
-    <span class="tok-key">"react"</span>: <span class="tok-str">"^19.2"</span>,      
-    <span class="tok-key">"git"</span>: <span class="tok-str">"^2.44.0"</span>,
-    <span class="tok-key">"github"</span>: <span class="tok-str">"latest"</span>,
-    <span class="tok-key">"vercel"</span>: <span class="tok-str">"latest"</span>,
-    <span class="tok-key">"supabase"</span>: <span class="tok-str">"^2.0.0"</span>,
-    <span class="tok-key">"figma"</span>: <span class="tok-str">"design"</span>
-  }
-}</code></pre>
-      </div>
+        <div class="projects__grid">
 
+          <article class="project-card fade-up">
+            <div class="project-card__top">
+              <span class="project-card__num">01</span>
+              <div class="project-card__links">
+                <a href="#" class="icon-btn" aria-label="Ver repositório do Nortiva no GitHub">
+                  <svg class="icon icon--sm" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C6.5 2 2 6.6 2 12.3C2 16.8 4.9 20.6 8.9 22C9.4 22.1 9.5 21.8 9.5 21.5V19.6C6.7 20.2 6.1 18.2 6.1 18.2C5.7 17.1 5.1 16.8 5.1 16.8C4.2 16.2 5.2 16.2 5.2 16.2C6.2 16.3 6.7 17.3 6.7 17.3C7.6 18.8 9 18.4 9.6 18.1C9.7 17.5 9.9 17 10.2 16.8C7.9 16.5 5.6 15.6 5.6 11.7C5.6 10.6 6 9.7 6.7 9C6.6 8.7 6.2 7.7 6.8 6.2C6.8 6.2 7.7 5.9 9.5 7.2C10.3 7 11.2 6.9 12 6.9C12.8 6.9 13.7 7 14.5 7.2C16.3 5.9 17.2 6.2 17.2 6.2C17.8 7.7 17.4 8.7 17.3 9C18 9.7 18.4 10.6 18.4 11.7C18.4 15.6 16.1 16.5 13.8 16.8C14.2 17.1 14.5 17.7 14.5 18.6V21.5C14.5 21.8 14.7 22.1 15.2 22C19.1 20.6 22 16.8 22 12.3C22 6.6 17.5 2 12 2Z" fill="currentColor"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Nortiva</h3>
+            <p class="project-card__desc">Projeto voltado para desenvolvimento web, design e criação de soluções digitais modernas.</p>
+            <div class="project-card__tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <a href="#" class="project-card__demo">
+              Ver demo
+              <svg class="icon icon--sm" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="project-card fade-up">
+            <div class="project-card__top">
+              <span class="project-card__num">02</span>
+              <div class="project-card__links">
+                <a href="#" class="icon-btn" aria-label="Ver repositório do Nortiva Pay no GitHub">
+                  <svg class="icon icon--sm" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C6.5 2 2 6.6 2 12.3C2 16.8 4.9 20.6 8.9 22C9.4 22.1 9.5 21.8 9.5 21.5V19.6C6.7 20.2 6.1 18.2 6.1 18.2C5.7 17.1 5.1 16.8 5.1 16.8C4.2 16.2 5.2 16.2 5.2 16.2C6.2 16.3 6.7 17.3 6.7 17.3C7.6 18.8 9 18.4 9.6 18.1C9.7 17.5 9.9 17 10.2 16.8C7.9 16.5 5.6 15.6 5.6 11.7C5.6 10.6 6 9.7 6.7 9C6.6 8.7 6.2 7.7 6.8 6.2C6.8 6.2 7.7 5.9 9.5 7.2C10.3 7 11.2 6.9 12 6.9C12.8 6.9 13.7 7 14.5 7.2C16.3 5.9 17.2 6.2 17.2 6.2C17.8 7.7 17.4 8.7 17.3 9C18 9.7 18.4 10.6 18.4 11.7C18.4 15.6 16.1 16.5 13.8 16.8C14.2 17.1 14.5 17.7 14.5 18.6V21.5C14.5 21.8 14.7 22.1 15.2 22C19.1 20.6 22 16.8 22 12.3C22 6.6 17.5 2 12 2Z" fill="currentColor"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Nortiva Pay</h3>
+            <p class="project-card__desc">Sistema de pagamentos com dashboard, gerenciamento de cobranças, API e banco de dados.</p>
+            <div class="project-card__tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">API</span>
+            </div>
+            <a href="#" class="project-card__demo">
+              Ver demo
+              <svg class="icon icon--sm" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+          <article class="project-card fade-up">
+            <div class="project-card__top">
+              <span class="project-card__num">03</span>
+              <div class="project-card__links">
+                <a href="#" class="icon-btn" aria-label="Ver repositório do GymTrackify no GitHub">
+                  <svg class="icon icon--sm" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C6.5 2 2 6.6 2 12.3C2 16.8 4.9 20.6 8.9 22C9.4 22.1 9.5 21.8 9.5 21.5V19.6C6.7 20.2 6.1 18.2 6.1 18.2C5.7 17.1 5.1 16.8 5.1 16.8C4.2 16.2 5.2 16.2 5.2 16.2C6.2 16.3 6.7 17.3 6.7 17.3C7.6 18.8 9 18.4 9.6 18.1C9.7 17.5 9.9 17 10.2 16.8C7.9 16.5 5.6 15.6 5.6 11.7C5.6 10.6 6 9.7 6.7 9C6.6 8.7 6.2 7.7 6.8 6.2C6.8 6.2 7.7 5.9 9.5 7.2C10.3 7 11.2 6.9 12 6.9C12.8 6.9 13.7 7 14.5 7.2C16.3 5.9 17.2 6.2 17.2 6.2C17.8 7.7 17.4 8.7 17.3 9C18 9.7 18.4 10.6 18.4 11.7C18.4 15.6 16.1 16.5 13.8 16.8C14.2 17.1 14.5 17.7 14.5 18.6V21.5C14.5 21.8 14.7 22.1 15.2 22C19.1 20.6 22 16.8 22 12.3C22 6.6 17.5 2 12 2Z" fill="currentColor"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">GymTrackify</h3>
+            <p class="project-card__desc">Plataforma para acompanhar treinos, exercícios e evolução de forma simples e organizada.</p>
+            <div class="project-card__tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Front-end</span>
+              <span class="tag">UI</span>
+            </div>
+            <a href="#" class="project-card__demo">
+              Ver demo
+              <svg class="icon icon--sm" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </article>
+
+        </div>
+      </div>
     </section>
 
-    <!-- Projetos -->
-    <section id="projects" class="projects reveal">
+    <!-- ==================================================
+         CERTIFICADOS
+    ================================================== -->
+    <section class="certificates" id="certificados">
+      <div class="container">
 
-      <div class="section-header">
-        <p class="eyebrow">~/projetos/</p>
-        <h2>Projetos em destaque</h2>
-      </div>
-
-      <div class="projects-grid">
-
-        <article class="project-card">
-          <div class="project-titlebar">
-            <div class="editor-dots"><span></span><span></span><span></span></div>
-            <span class="editor-filename">nortiva/</span>
-          </div>
-
-          <div class="project-content">
-            <h3>Nortiva</h3>
-
-            <p>
-              Plataforma para desenvolvimento web, identidade visual
-              e soluções digitais sob medida.
-            </p>
-
-            <div class="project-tags">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-            </div>
-
-            <a href="https://github.com/Nortiva" class="project-link">$ abrir --projeto</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-titlebar">
-            <div class="editor-dots"><span></span><span></span><span></span></div>
-            <span class="editor-filename">nortiva-studio/</span>
-          </div>
-
-          <div class="project-content">
-            <h3>Nortiva Studio</h3>
-
-            <p>
-              Organização criada para centralizar, documentar e apresentar projetos
-              desenvolvidos pela Nortiva.
-            </p>
-
-            <div class="project-tags">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-            </div>
-
-            <a href="https://github.com/Nortiva-Studio" class="project-link">$ abrir --projeto</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-titlebar">
-            <div class="editor-dots"><span></span><span></span><span></span></div>
-            <span class="editor-filename">pato-devs/</span>
-          </div>
-
-          <div class="project-content">
-            <h3>PatoDevs</h3>
-
-            <p>
-              Comunidade de desenvolvedores que compartilham conhecimento,
-              dicas e experiências sobre programação e tecnologia.
-            </p>
-
-            <div class="project-tags">
-              <span>Comunidade</span>
-            </div>
-
-            <a href="https://github.com/PatoDevs" class="project-link">$ abrir --projeto</a>
-          </div>
-        </article>
-
-      </div>
-
-    </section>
-
-   
-
-    <!-- Contato -->
-    <section id="contact" class="contact reveal">
-
-      <div class="contact-box">
-
-        <div class="contact-heading">
-          <p class="eyebrow">~/contato $ ./enviar.sh</p>
-          <h2>Vamos criar algo juntos?</h2>
-          <p class="contact-sub">Responder rápido é prioridade — me chama por qualquer um dos canais abaixo.</p>
+        <div class="section-head fade-up">
+          <span class="section-head__eyebrow">Certificados</span>
+          <h2 class="section-head__title">Conhecimento que estou construindo.</h2>
+          <p class="section-head__desc">Cursos, certificações e aprendizados que fazem parte da minha evolução como desenvolvedor.</p>
         </div>
 
-        <div class="contact-links">
-          <button class="contact-link" id="copy-email" data-email="matheusfrdev@gmail.com" type="button">
-            <span class="contact-link-label">email</span>
-            <span class="contact-link-value" id="email-value">matheusfrdev@gmail.com</span>
-          </button>
+        <div class="certificates__grid fade-up delay-1">
 
-          <a href="https://github.com/matheusfrdev" target="_blank" rel="noopener" class="contact-link">
-            <span class="contact-link-label">github</span>
-            <span class="contact-link-value">--visit</span>
+          <div class="cert-card">
+            <svg class="cert-card__icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L14.5 8.5L21 9.2L16 13.5L17.5 20L12 16.5L6.5 20L8 13.5L3 9.2L9.5 8.5L12 2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            <h3 class="cert-card__name">Desenvolvimento Web</h3>
+            <span class="cert-card__year">2026</span>
+            <p class="cert-card__inst">CURSO / INSTITUIÇÃO</p>
+            <a href="certificados/desenvolvimento-web.pdf" target="_blank" rel="noopener noreferrer" class="cert-card__link">
+              Ver certificado
+              <svg class="icon icon--sm" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <svg class="cert-card__icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L14.5 8.5L21 9.2L16 13.5L17.5 20L12 16.5L6.5 20L8 13.5L3 9.2L9.5 8.5L12 2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            <h3 class="cert-card__name">Python</h3>
+            <span class="cert-card__year">2026</span>
+            <p class="cert-card__inst">CURSO DE PYTHON / FUNDAÇÃO BRADESCO</p>
+            <a href="src/certificados/python.pdf" target="_blank" rel="noopener noreferrer" class="cert-card__link">
+              Ver certificado
+              <svg class="icon icon--sm" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         CONTATO
+    ================================================== -->
+    <section class="contact" id="contato">
+      <div class="container">
+
+        <div class="section-head section-head--center fade-up">
+          <span class="section-head__eyebrow"><span class="section-head__num">05</span> Contato</span>
+          <h2 class="section-head__title">Vamos construir algo juntos?</h2>
+          <p class="section-head__desc">Tem uma ideia, projeto ou simplesmente quer trocar uma ideia sobre tecnologia? Me encontre por aqui.</p>
+        </div>
+
+        <div class="contact__links fade-up delay-1">
+
+          <a href="https://github.com/SEU_USUARIO" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <svg class="contact-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C6.5 2 2 6.6 2 12.3C2 16.8 4.9 20.6 8.9 22C9.4 22.1 9.5 21.8 9.5 21.5V19.6C6.7 20.2 6.1 18.2 6.1 18.2C5.7 17.1 5.1 16.8 5.1 16.8C4.2 16.2 5.2 16.2 5.2 16.2C6.2 16.3 6.7 17.3 6.7 17.3C7.6 18.8 9 18.4 9.6 18.1C9.7 17.5 9.9 17 10.2 16.8C7.9 16.5 5.6 15.6 5.6 11.7C5.6 10.6 6 9.7 6.7 9C6.6 8.7 6.2 7.7 6.8 6.2C6.8 6.2 7.7 5.9 9.5 7.2C10.3 7 11.2 6.9 12 6.9C12.8 6.9 13.7 7 14.5 7.2C16.3 5.9 17.2 6.2 17.2 6.2C17.8 7.7 17.4 8.7 17.3 9C18 9.7 18.4 10.6 18.4 11.7C18.4 15.6 16.1 16.5 13.8 16.8C14.2 17.1 14.5 17.7 14.5 18.6V21.5C14.5 21.8 14.7 22.1 15.2 22C19.1 20.6 22 16.8 22 12.3C22 6.6 17.5 2 12 2Z" fill="currentColor"/></svg>
+            <span>GitHub</span>
+            <svg class="icon icon--sm contact-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
 
-          <a href="https://linkedin.com/in/matheusfrdev" target="_blank" rel="noopener" class="contact-link">
-            <span class="contact-link-label">linkedin</span>
-            <span class="contact-link-value">--connect</span>
+          <a href="https://instagram.com/SEU_USUARIO" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <svg class="contact-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg>
+            <span>Instagram</span>
+            <svg class="icon icon--sm contact-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
+
+          <a href="mailto:seuemail@exemplo.com" class="contact-card">
+            <svg class="contact-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M4 7L12 13L20 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Email</span>
+            <svg class="icon icon--sm contact-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+
         </div>
-
       </div>
-
     </section>
 
   </main>
 
+  <!-- ==================================================
+       FOOTER
+  ================================================== -->
   <footer class="footer">
-    <p> © 2026 -  Matheus Fraga </p>
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; 2026 Matheus Fraga.</p>
+      <div class="footer__links">
+        <a href="https://github.com/SEU_USUARIO" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg class="icon icon--sm" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C6.5 2 2 6.6 2 12.3C2 16.8 4.9 20.6 8.9 22C9.4 22.1 9.5 21.8 9.5 21.5V19.6C6.7 20.2 6.1 18.2 6.1 18.2C5.7 17.1 5.1 16.8 5.1 16.8C4.2 16.2 5.2 16.2 5.2 16.2C6.2 16.3 6.7 17.3 6.7 17.3C7.6 18.8 9 18.4 9.6 18.1C9.7 17.5 9.9 17 10.2 16.8C7.9 16.5 5.6 15.6 5.6 11.7C5.6 10.6 6 9.7 6.7 9C6.6 8.7 6.2 7.7 6.8 6.2C6.8 6.2 7.7 5.9 9.5 7.2C10.3 7 11.2 6.9 12 6.9C12.8 6.9 13.7 7 14.5 7.2C16.3 5.9 17.2 6.2 17.2 6.2C17.8 7.7 17.4 8.7 17.3 9C18 9.7 18.4 10.6 18.4 11.7C18.4 15.6 16.1 16.5 13.8 16.8C14.2 17.1 14.5 17.7 14.5 18.6V21.5C14.5 21.8 14.7 22.1 15.2 22C19.1 20.6 22 16.8 22 12.3C22 6.6 17.5 2 12 2Z" fill="currentColor"/></svg>
+        </a>
+        <a href="https://instagram.com/SEU_USUARIO" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg class="icon icon--sm" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
