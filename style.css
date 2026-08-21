@@ -492,7 +492,7 @@ html{
 
   align-items:center;
 
-  gap:4px;
+  gap:2px;
 
   background:var(--bg-secondary);
 
@@ -510,11 +510,11 @@ html{
 
   gap:6px;
 
-  padding:8px 14px;
+  padding:8px 12px;
 
   border-radius:8px;
 
-  font-size:13.5px;
+  font-size:13px;
 
   color:var(--text-secondary);
 
@@ -1407,7 +1407,7 @@ section{
   }
 }
 
-@media (max-width: 900px){
+@media (max-width: 1080px){
   .nav{
     display:none;
   }
@@ -1419,7 +1419,9 @@ section{
   .mobile-menu{
     display:flex;
   }
+}
 
+@media (max-width: 900px){
   .about__grid{
     grid-template-columns:1fr;
   }
