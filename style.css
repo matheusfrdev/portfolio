@@ -647,14 +647,6 @@ html{
   color:var(--text-primary);
 }
 
-.mobile-menu__actions{
-  display:flex;
-
-  flex-direction:column;
-
-  gap:10px;
-}
-
 /* ========================================
    HERO
 ======================================== */
@@ -1172,6 +1164,78 @@ section{
 }
 
 /* ========================================
+   CURRÍCULO
+======================================== */
+
+.resume__card{
+  display:flex;
+
+  align-items:center;
+
+  gap:28px;
+
+  padding:36px 40px;
+
+  border-radius:16px;
+
+  border:1px solid var(--border);
+
+  background:var(--bg-secondary);
+
+  transition:border-color 0.3s var(--ease);
+}
+
+.resume__card:hover{
+  border-color:var(--border-strong);
+}
+
+.resume__icon{
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  flex-shrink:0;
+
+  width:56px;
+
+  height:56px;
+
+  border-radius:12px;
+
+  background:var(--green-dark);
+
+  color:var(--green);
+}
+
+.resume__text{
+  flex:1;
+}
+
+.resume__title{
+  font-size:1.3rem;
+
+  font-weight:700;
+
+  letter-spacing:-0.01em;
+
+  margin-bottom:8px;
+}
+
+.resume__desc{
+  color:var(--text-secondary);
+
+  font-size:0.95rem;
+
+  max-width:480px;
+}
+
+.resume__card .btn--resume{
+  flex-shrink:0;
+}
+
+/* ========================================
    CONTATO
 ======================================== */
 
@@ -1402,6 +1466,22 @@ section{
     width:100%;
   }
 
+  .resume__card{
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    padding:28px;
+  }
+
+  .resume__desc{
+    max-width:none;
+  }
+
+  .resume__card .btn--resume{
+    width:100%;
+  }
+
   .about__stats{
     grid-template-columns:1fr 1fr;
   }
@@ -1426,30 +1506,6 @@ section{
     gap:14px;
 
     text-align:center;
-  }
-}
-
-@media (max-width: 480px){
-  .btn--resume span{
-    display:none;
-  }
-
-  .btn--resume{
-    padding:0 12px;
-  }
-
-  .header__actions .btn--resume .icon{
-    width:18px;
-
-    height:18px;
-  }
-
-  .mobile-menu__actions .btn--resume span{
-    display:inline;
-  }
-
-  .mobile-menu__actions .btn--resume{
-    padding:0 20px;
   }
 }
 
