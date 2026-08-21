@@ -1164,7 +1164,7 @@ section{
 }
 
 /* ========================================
-   CURRÍCULO
+   CURRÍCULO (dentro da seção Documentos)
 ======================================== */
 
 .resume__card{
@@ -1172,9 +1172,11 @@ section{
 
   align-items:center;
 
-  gap:28px;
+  gap:24px;
 
-  padding:36px 40px;
+  margin-top:20px;
+
+  padding:28px 32px;
 
   border-radius:16px;
 
@@ -1198,11 +1200,11 @@ section{
 
   flex-shrink:0;
 
-  width:56px;
+  width:48px;
 
-  height:56px;
+  height:48px;
 
-  border-radius:12px;
+  border-radius:10px;
 
   background:var(--green-dark);
 
@@ -1214,19 +1216,19 @@ section{
 }
 
 .resume__title{
-  font-size:1.3rem;
+  font-size:1.1rem;
 
   font-weight:700;
 
   letter-spacing:-0.01em;
 
-  margin-bottom:8px;
+  margin-bottom:4px;
 }
 
 .resume__desc{
   color:var(--text-secondary);
 
-  font-size:0.95rem;
+  font-size:0.9rem;
 
   max-width:480px;
 }
