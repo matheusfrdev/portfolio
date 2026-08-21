@@ -369,6 +369,24 @@ html{
   color:var(--green);
 }
 
+.btn--resume{
+  border:1px solid var(--border-strong);
+
+  color:var(--text-primary);
+
+  background:transparent;
+}
+
+.btn--resume:hover{
+  transform:translateY(-2px);
+
+  border-color:var(--green);
+
+  color:var(--green);
+
+  background:var(--green-dark);
+}
+
 .icon-btn{
   display:inline-flex;
 
@@ -627,6 +645,14 @@ html{
   background:#151B20;
 
   color:var(--text-primary);
+}
+
+.mobile-menu__actions{
+  display:flex;
+
+  flex-direction:column;
+
+  gap:10px;
 }
 
 /* ========================================
@@ -1400,6 +1426,30 @@ section{
     gap:14px;
 
     text-align:center;
+  }
+}
+
+@media (max-width: 480px){
+  .btn--resume span{
+    display:none;
+  }
+
+  .btn--resume{
+    padding:0 12px;
+  }
+
+  .header__actions .btn--resume .icon{
+    width:18px;
+
+    height:18px;
+  }
+
+  .mobile-menu__actions .btn--resume span{
+    display:inline;
+  }
+
+  .mobile-menu__actions .btn--resume{
+    padding:0 20px;
   }
 }
 
