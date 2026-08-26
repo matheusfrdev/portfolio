@@ -233,7 +233,7 @@ function atualizarStatus() {
       horario >= 17 * 60 + 1 &&
       horario <= 18 * 60 + 40
     ) {
-      status = "status: academia.. 🏋️‍♂️";
+      status = "status: na academia.. 🏋️‍♂️";
     }
 
     // 18:41 → 22:00
