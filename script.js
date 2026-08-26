@@ -1,6 +1,6 @@
 /* ==================================================
 
-  meu sonho é desenhar BUS no rio de janeiro
+  cruzeiro maior de minas 🦊💙
 
 ================================================== */
 
@@ -167,3 +167,97 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+function atualizarStatus() {
+  const statusElement = document.getElementById("dynamic-status");
+
+  if (!statusElement) return;
+
+  const agora = new Date();
+
+  const dia = agora.getDay(); // 0 = domingo | 1 = segunda | ... | 6 = sábado
+  const horario = agora.getHours() * 60 + agora.getMinutes();
+
+  let status = "status: disponível.. ☕";
+
+  // SEGUNDA A SEXTA
+  if (dia >= 1 && dia <= 5) {
+
+    // 00:00 → 06:30
+    if (horario >= 0 && horario <= 6 * 60 + 30) {
+      status = "status: dormindo.. 💤😴";
+    }
+
+    // 06:31 → 12:10
+    else if (
+      horario >= 6 * 60 + 31 &&
+      horario <= 12 * 60 + 10
+    ) {
+      status = "status: estudando.. 📚";
+    }
+
+    // 12:11 → 13:00
+    else if (
+      horario >= 12 * 60 + 11 &&
+      horario <= 13 * 60
+    ) {
+      status = "status: almoçando.. 🍽️";
+    }
+
+    // 13:01 → 13:30
+    else if (
+      horario >= 13 * 60 + 1 &&
+      horario <= 13 * 60 + 30
+    ) {
+      status = "status: descansando.. 😴";
+    }
+
+    // 13:31 → 16:40
+    else if (
+      horario >= 13 * 60 + 31 &&
+      horario <= 16 * 60 + 40
+    ) {
+      status = "status: codando.. 💻";
+    }
+
+    // 16:41 → 17:00
+    else if (
+      horario >= 16 * 60 + 41 &&
+      horario <= 17 * 60
+    ) {
+      status = "status: descansando.. ☕";
+    }
+
+    // 17:01 → 18:40
+    else if (
+      horario >= 17 * 60 + 1 &&
+      horario <= 18 * 60 + 40
+    ) {
+      status = "status: academia.. 🏋️‍♂️";
+    }
+
+    // 18:41 → 22:00
+    else if (
+      horario >= 18 * 60 + 41 &&
+      horario <= 22 * 60
+    ) {
+      status = "status: lazer.. 🎧";
+    }
+
+    // 22:01 → 23:59
+    else {
+      status = "status: relaxando.. 🌙";
+    }
+  }
+
+  // SÁBADO E DOMINGO
+  else {
+    status = "status: descansando.. 💤";
+  }
+
+  statusElement.textContent = status;
+}
+
+atualizarStatus();
+
+setInterval(atualizarStatus, 60000);
