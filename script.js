@@ -252,7 +252,7 @@ function atualizarStatus() {
 
   // SÁBADO E DOMINGO
   else {
-    status = "status: aproveitando o fim de semana.. 🥳";
+    status = "status: fim de semana.. 🥳";
   }
 
   statusElement.textContent = status;
