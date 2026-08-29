@@ -685,6 +685,25 @@ html {
   gap: 14px;
 }
 
+.hero__resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 6px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.hero__resume:hover {
+  color: var(--text-primary);
+}
+
+.hero__resume svg {
+  opacity: 0.7;
+}
+
 /* ========================================
    SEÇÕES
 ======================================== */
