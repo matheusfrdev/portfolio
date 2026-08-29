@@ -587,121 +587,104 @@ html {
    HERO
 ======================================== */
 
-.hero {
-  min-height: 100svh;
+.hero{
+  min-height:100svh;
 
-  display: flex;
-  align-items: center;
+  display:flex;
 
-  padding:
-    calc(var(--header-h) + 40px)
-    0
-    80px;
+  align-items:center;
+
+  padding:calc(var(--header-h) + 40px) 0 80px;
 }
 
-.hero__inner {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.hero__inner{
+  display:flex;
 
-  max-width: 720px;
+  flex-direction:column;
+
+  align-items:flex-start;
+
+  max-width:720px;
 }
 
-.status-badge {
-  display: inline-flex;
-  align-items: center;
+.status-badge{
+  display:inline-flex;
 
-  gap: 9px;
+  align-items:center;
 
-  padding: 8px 14px;
+  gap:9px;
 
-  border-radius: 100px;
+  padding:8px 14px;
 
-  border: 1px solid var(--border);
+  border-radius:100px;
 
-  background: var(--bg-secondary);
+  border:1px solid var(--border);
 
-  font-family: var(--font-mono);
-  font-size: 12.5px;
+  background:var(--bg-secondary);
 
-  color: var(--text-secondary);
+  font-family:var(--font-mono);
 
-  margin-bottom: 28px;
+  font-size:12.5px;
+
+  color:var(--text-secondary);
+
+  margin-bottom:28px;
 }
 
-.status-badge__dot {
-  width: 7px;
-  height: 7px;
+.status-badge__dot{
+  width:7px;
 
-  border-radius: 50%;
+  height:7px;
 
-  background: var(--green);
+  border-radius:50%;
 
-  animation: pulse 2.2s infinite;
+  background:var(--green);
+
+  animation:pulse 2.2s infinite;
 }
 
-.status-badge__emoji {
-  font-size: 14px;
-  line-height: 1;
+.status-badge__emoji{
+  font-size:14px;
 
-  color: initial;
+  line-height:1;
 
-  font-family:
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
-    'Noto Color Emoji',
-    sans-serif;
+  color:initial;
+
+  font-family:'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
 }
 
-.hero__title {
-  font-size: clamp(2.6rem, 6vw, 4.4rem);
+.hero__title{
+  font-size:clamp(2.6rem, 6vw, 4.4rem);
 
-  font-weight: 700;
+  font-weight:700;
 
-  line-height: 1.08;
+  line-height:1.08;
 
-  letter-spacing: -0.02em;
+  letter-spacing:-0.02em;
 
-  margin-bottom: 24px;
+  margin-bottom:24px;
 }
 
-.hero__name {
-  color: var(--green);
+.hero__name{
+  color:var(--green);
 }
 
-.hero__desc {
-  font-size: clamp(1rem, 1.6vw, 1.15rem);
+.hero__desc{
+  font-size:clamp(1rem, 1.6vw, 1.15rem);
 
-  color: var(--text-secondary);
+  color:var(--text-secondary);
 
-  max-width: 560px;
+  max-width:560px;
 
-  margin-bottom: 36px;
+  margin-bottom:36px;
 }
 
-.hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-}
+.hero__actions{
+  display:flex;
 
-.hero__resume {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-left: 6px;
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
+  flex-wrap:wrap;
 
-.hero__resume:hover {
-  color: var(--text-primary);
-}
-
-.hero__resume svg {
-  opacity: 0.7;
+  gap:14px;
 }
 
 /* ========================================
@@ -1393,23 +1376,92 @@ section {
 
 }
 
-  /* CURRÍCULO */
-
-  .resume__card {
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    padding: 28px;
-  }
-
-  .resume__desc {
-    max-width: none;
-  }
-
-  .resume__card .btn--resume {
-    width: 100%;
-  }
+   /* ========================================
+      CURRÍCULO — HERO
+   ======================================== */
+   
+   .hero__resume {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+   
+     gap: 10px;
+   
+     height: 42px;
+     padding: 0 16px;
+   
+     border: 1px solid var(--border);
+     border-radius: 8px;
+   
+     background: var(--bg-secondary);
+   
+     color: var(--text-secondary);
+   
+     font-size: 13px;
+     font-weight: 600;
+   
+     white-space: nowrap;
+   
+     transition:
+       transform 0.25s var(--ease),
+       background 0.25s var(--ease),
+       border-color 0.25s var(--ease),
+       color 0.25s var(--ease);
+   }
+   
+   .hero__resume:hover {
+     transform: translateY(-2px);
+   
+     background: var(--bg-elevated);
+   
+     border-color: var(--green);
+   
+     color: var(--text-primary);
+   }
+   
+   .hero__resume-icon {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   
+     width: 24px;
+     height: 24px;
+   
+     flex-shrink: 0;
+   
+     border-radius: 6px;
+   
+     background: var(--green);
+   
+     color: #0A140C;
+   }
+   
+   .hero__resume-icon svg {
+     width: 14px;
+     height: 14px;
+   }
+   
+   .hero__resume span:last-child {
+     line-height: 1;
+   }
+   
+     /* CURRÍCULO */
+   
+     .resume__card {
+       flex-direction: column;
+   
+       align-items: flex-start;
+   
+       padding: 28px;
+     }
+   
+     .resume__desc {
+       max-width: none;
+     }
+   
+     .resume__card .btn--resume {
+       width: 100%;
+     }
 
   /* STACK */
 
