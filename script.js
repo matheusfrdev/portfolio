@@ -212,36 +212,36 @@ function atualizarStatus() {
       status = "status: descansando.. 😴";
     }
 
-    // 13:31 → 16:40
+    // 13:31 → 15:40
     else if (
       horario >= 13 * 60 + 31 &&
-      horario <= 16 * 60 + 40
+      horario <= 15 * 60 + 40
     ) {
       status = "status: codando.. 💻";
     }
 
-    // 16:41 → 17:00
+    // 15:41 → 16:00
     else if (
-      horario >= 16 * 60 + 41 &&
-      horario <= 17 * 60
+      horario >= 15 * 60 + 41 &&
+      horario <= 16 * 60
     ) {
       status = "status: descansando.. ☕";
     }
 
-    // 17:01 → 18:40
+    // 16:01 → 18:20
     else if (
-      horario >= 17 * 60 + 1 &&
-      horario <= 18 * 60 + 40
+      horario >= 16 * 60 + 1 &&
+      horario <= 18 * 60 + 20
     ) {
       status = "status: na academia.. 🏋️‍♂️";
     }
 
-    // 18:41 → 22:00
+    // 18:21 → 22:00
     else if (
-      horario >= 18 * 60 + 41 &&
+      horario >= 18 * 60 + 21 &&
       horario <= 22 * 60
     ) {
-      status = "status: lazer.. 🎧";
+      status = "status: no lazer.. 🎧";
     }
 
     // 22:01 → 23:59
