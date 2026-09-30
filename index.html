@@ -5,13 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Matheus Fraga — Desenvolvedor Full Stack</title>
   <meta name="description" content="Portfólio pessoal de Matheus Fraga, desenvolvedor Full Stack de 17 anos. Projetos, stack e contato.">
+  <meta name="author" content="Matheus Fraga">
+  <meta name="theme-color" content="#080B0D">
+  <link rel="canonical" href="https://matheusfraga.com.br/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Matheus Fraga">
+  <meta property="og:title" content="Matheus Fraga — Desenvolvedor Full Stack">
+  <meta property="og:description" content="Portfólio pessoal de Matheus Fraga, desenvolvedor Full Stack de 17 anos. Projetos, stack e contato.">
+  <meta property="og:url" content="https://matheusfraga.com.br/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Matheus Fraga — Desenvolvedor Full Stack">
+  <meta name="twitter:description" content="Portfólio pessoal de Matheus Fraga, desenvolvedor Full Stack de 17 anos. Projetos, stack e contato.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="icon" type="images/png" href="../assets/favicon.png">  
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Matheus Fraga",
+      "url": "https://matheusfraga.com.br/",
+      "jobTitle": "Desenvolvedor Full Stack",
+      "sameAs": [
+        "https://github.com/matheusfrdev",
+        "https://instagram.com/fragaxyz"
+      ]
+    }
+  </script>
+  <!-- Ajustes de acessibilidade sem alterar o visual existente. -->
+  <style>
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 1000;
+      padding: 12px 16px;
+      border-radius: 8px;
+      background: var(--bg);
+      color: var(--text-primary);
+      transform: translateY(calc(-100% - 24px));
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .mobile-menu:not(.is-open) {
+      visibility: hidden;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+  <noscript>
+    <style>
+      .fade-up { opacity: 1; transform: none; }
+      .menu-toggle, .back-to-top, .status-badge { display: none; }
+      @media (max-width: 1080px) {
+        .mobile-menu:not(.is-open) {
+          visibility: visible;
+          max-height: none;
+          opacity: 1;
+        }
+        .header { position: static; }
+      }
+    </style>
+  </noscript>
 </head>
 <body>
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
 
   <!-- ==================================================
        BACKGROUND DECORATIVO
@@ -32,30 +101,30 @@
 
       <nav class="nav" id="nav" aria-label="Navegação principal">
         <ul class="nav__list">
-          <li><a href="#inicio" class="nav__link is-active" data-nav="inicio"><span class="nav__num">01</span> início</a></li>
-          <li><a href="#sobre" class="nav__link" data-nav="sobre"><span class="nav__num">02</span> sobre</a></li>
-          <li><a href="#stack" class="nav__link" data-nav="stack"><span class="nav__num">03</span> stack</a></li>
-          <li><a href="#projetos" class="nav__link" data-nav="projetos"><span class="nav__num">04</span> projetos</a></li>
-          <li><a href="#documentos" class="nav__link" data-nav="documentos"><span class="nav__num">05</span> documentos</a></li>
-          <li><a href="#contato" class="nav__link" data-nav="contato"><span class="nav__num">06</span> contato</a></li>
+          <li><a href="#inicio" class="nav__link is-active" data-nav="inicio"><span class="nav__num" aria-hidden="true">01</span> início</a></li>
+          <li><a href="#sobre" class="nav__link" data-nav="sobre"><span class="nav__num" aria-hidden="true">02</span> sobre</a></li>
+          <li><a href="#stack" class="nav__link" data-nav="stack"><span class="nav__num" aria-hidden="true">03</span> stack</a></li>
+          <li><a href="#projetos" class="nav__link" data-nav="projetos"><span class="nav__num" aria-hidden="true">04</span> projetos</a></li>
+          <li><a href="#documentos" class="nav__link" data-nav="documentos"><span class="nav__num" aria-hidden="true">05</span> documentos</a></li>
+          <li><a href="#contato" class="nav__link" data-nav="contato"><span class="nav__num" aria-hidden="true">06</span> contato</a></li>
         </ul>
       </nav>
 
       <div class="header__actions">
-        <a href="https://github.com/matheusfrdev" target="_blank" rel="noopener noreferrer" class="btn btn--github">
-          <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <a href="https://github.com/matheusfrdev" target="_blank" rel="noopener noreferrer" class="btn btn--github" aria-label="GitHub de Matheus Fraga (abre em nova aba)">
+          <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
             <path d="M12 2C6.48 2 2 6.58 2 12.25C2 16.78 4.87 20.62 8.84 21.98C9.34 22.07 9.52 21.76 9.52 21.49C9.52 21.25 9.51 20.44 9.51 19.58C7 20.09 6.35 18.99 6.15 18.42C6.04 18.13 5.55 17.22 5.12 16.98C4.77 16.79 4.27 16.28 5.11 16.27C5.9 16.26 6.46 17.01 6.65 17.31C7.55 18.83 8.98 18.4 9.55 18.14C9.64 17.47 9.91 17.02 10.2 16.76C7.95 16.5 5.6 15.62 5.6 11.71C5.6 10.6 5.99 9.68 6.67 8.96C6.56 8.7 6.21 7.65 6.77 6.23C6.77 6.23 7.65 5.95 9.52 7.22C10.31 7 11.15 6.89 12 6.89C12.85 6.89 13.69 7 14.48 7.22C16.35 5.94 17.23 6.23 17.23 6.23C17.79 7.65 17.44 8.7 17.33 8.96C18.01 9.68 18.4 10.59 18.4 11.71C18.4 15.63 16.04 16.5 13.79 16.76C14.15 17.08 14.47 17.7 14.47 18.65C14.47 20 14.46 21.15 14.46 21.49C14.46 21.76 14.64 22.08 15.14 21.98C17.1279 21.2917 18.8464 20.0034 20.0673 18.293C21.2881 16.5826 21.9459 14.5387 21.95 12.44C21.95 6.58 17.47 2 12 2Z" fill="currentColor"/>
           </svg>
           <span>GitHub</span>
         </a>
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
-          <svg class="icon icon--menu" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+          <svg class="icon icon--menu" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
             <path d="M3 6H21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
             <path d="M3 12H21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
             <path d="M3 18H21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
           </svg>
-          <svg class="icon icon--close" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <svg class="icon icon--close" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
             <path d="M6 6L18 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
             <path d="M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
           </svg>
@@ -65,76 +134,76 @@
     </div>
 
     <!-- Menu mobile -->
-    <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Navegação principal no celular">
       <ul class="mobile-menu__list">
-        <li><a href="#inicio" data-nav="inicio"><span class="nav__num">01</span> início</a></li>
-        <li><a href="#sobre" data-nav="sobre"><span class="nav__num">02</span> sobre</a></li>
-        <li><a href="#stack" data-nav="stack"><span class="nav__num">03</span> stack</a></li>
-        <li><a href="#projetos" data-nav="projetos"><span class="nav__num">04</span> projetos</a></li>
-        <li><a href="#documentos" data-nav="documentos"><span class="nav__num">05</span> documentos</a></li>
-        <li><a href="#contato" data-nav="contato"><span class="nav__num">06</span> contato</a></li>
+        <li><a href="#inicio" data-nav="inicio"><span class="nav__num" aria-hidden="true">01</span> início</a></li>
+        <li><a href="#sobre" data-nav="sobre"><span class="nav__num" aria-hidden="true">02</span> sobre</a></li>
+        <li><a href="#stack" data-nav="stack"><span class="nav__num" aria-hidden="true">03</span> stack</a></li>
+        <li><a href="#projetos" data-nav="projetos"><span class="nav__num" aria-hidden="true">04</span> projetos</a></li>
+        <li><a href="#documentos" data-nav="documentos"><span class="nav__num" aria-hidden="true">05</span> documentos</a></li>
+        <li><a href="#contato" data-nav="contato"><span class="nav__num" aria-hidden="true">06</span> contato</a></li>
       </ul>
-      <a href="https://github.com/matheusfrdev" target="_blank" rel="noopener noreferrer" class="btn btn--github btn--block">
-        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <a href="https://github.com/matheusfrdev" target="_blank" rel="noopener noreferrer" class="btn btn--github btn--block" aria-label="GitHub de Matheus Fraga (abre em nova aba)">
+        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
           <path d="M12 2C6.48 2 2 6.58 2 12.25C2 16.78 4.87 20.62 8.84 21.98C9.34 22.07 9.52 21.76 9.52 21.49C9.52 21.25 9.51 20.44 9.51 19.58C7 20.09 6.35 18.99 6.15 18.42C6.04 18.13 5.55 17.22 5.12 16.98C4.77 16.79 4.27 16.28 5.11 16.27C5.9 16.26 6.46 17.01 6.65 17.31C7.55 18.83 8.98 18.4 9.55 18.14C9.64 17.47 9.91 17.02 10.2 16.76C7.95 16.5 5.6 15.62 5.6 11.71C5.6 10.6 5.99 9.68 6.67 8.96C6.56 8.7 6.21 7.65 6.77 6.23C6.77 6.23 7.65 5.95 9.52 7.22C10.31 7 11.15 6.89 12 6.89C12.85 6.89 13.69 7 14.48 7.22C16.35 5.94 17.23 6.23 17.23 6.23C17.79 7.65 17.44 8.7 17.33 8.96C18.01 9.68 18.4 10.59 18.4 11.71C18.4 15.63 16.04 16.5 13.79 16.76C14.15 17.08 14.47 17.7 14.47 18.65C14.47 20 14.46 21.15 14.46 21.49C14.46 21.76 14.64 22.08 15.14 21.98C17.1279 21.2917 18.8464 20.0034 20.0673 18.293C21.2881 16.5826 21.9459 14.5387 21.95 12.44C21.95 6.58 17.47 2 12 2Z" fill="currentColor"/>
         </svg>
         <span>GitHub</span>
       </a>
-    </div>
+    </nav>
   </header>
 
-  <main>
+  <main id="conteudo" tabindex="-1">
 
     <!-- ==================================================
          HERO
     ================================================== -->
-    <section class="hero" id="inicio">
+    <section class="hero" id="inicio" aria-labelledby="inicio-titulo" tabindex="-1">
       <div class="container hero__inner">
-    
+
         <span class="status-badge">
-          <span class="status-badge__dot"></span>
-          <span id="dynamic-status">status: carregando...</span>
+          <span class="status-badge__dot" aria-hidden="true"></span>
+          <span id="dynamic-status" role="status">status: carregando...</span>
         </span>
-    
-        <h1 class="hero__title fade-up delay-1">
+
+        <h1 id="inicio-titulo" class="hero__title fade-up delay-1">
           Olá, eu sou o<br>
           <span class="hero__name">Matheus!</span>
         </h1>
-    
+
         <p class="hero__desc fade-up delay-2">
           Desenvolvedor Full Stack & Designer de 17 anos, focado em criar
           aplicações web modernas e interfaces funcionais. Busco evoluir
           constantemente minhas habilidades, unindo desenvolvimento, design
           e atenção aos detalhes.
         </p>
-    
+
         <div class="hero__actions fade-up delay-3">
-          
+
           <a href="#projetos" class="btn btn--primary">
             Ver projetos
-            <svg class="icon icon--sm" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <svg class="icon icon--sm" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
               <path d="M5 12H19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
               <path d="M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </a>
-    
-          <a href="curriculo/cv.pdf" class="btn btn--terminal">
-            <span class="btn--terminal__prompt">$</span> ver --currículo
+
+          <a href="curriculo/cv.pdf" class="btn btn--terminal" aria-label="ver --currículo de Matheus Fraga (PDF)">
+            <span class="btn--terminal__prompt" aria-hidden="true">$</span> ver --currículo
           </a>
         </div>
-    
+
       </div>
     </section>
 
     <!-- ==================================================
          SOBRE
     ================================================== -->
-    <section class="about" id="sobre">
+    <section class="about" id="sobre" aria-labelledby="sobre-titulo" tabindex="-1">
       <div class="container">
 
         <div class="section-head fade-up">
-          <span class="section-head__eyebrow"><span class="section-head__num">02</span> Sobre mim</span>
-          <h2 class="section-head__title">Um pouco da minha vida!</h2>
+          <span class="section-head__eyebrow"><span class="section-head__num" aria-hidden="true">02</span> Sobre mim</span>
+          <h2 id="sobre-titulo" class="section-head__title">Um pouco da minha vida!</h2>
         </div>
 
         <div class="about__grid">
@@ -155,12 +224,12 @@
     <!-- ==================================================
          STACK
     ================================================== -->
-    <section class="stack" id="stack">
+    <section class="stack" id="stack" aria-labelledby="stack-titulo" tabindex="-1">
       <div class="container">
 
         <div class="section-head fade-up">
-          <span class="section-head__eyebrow"><span class="section-head__num">03</span> Stack</span>
-          <h2 class="section-head__title">Ferramentas que uso.</h2>
+          <span class="section-head__eyebrow"><span class="section-head__num" aria-hidden="true">03</span> Stack</span>
+          <h2 id="stack-titulo" class="section-head__title">Ferramentas que uso.</h2>
           <p class="section-head__desc">Tecnologias que estudo e utilizo para transformar ideias em aplicações reais, do front-end ao back-end.</p>
         </div>
 
@@ -168,7 +237,7 @@
 
           <!-- HTML5 -->
           <div class="tech-card">
-            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
               <path d="M4 3L5.7 21L12 22.8L18.3 21L20 3H4Z"
                 stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
               <path d="M16.5 7.5H8L8.3 11H16.2L15.7 16.5L12 17.5L8.3 16.5L8.1 14"
@@ -179,7 +248,7 @@
 
           <!-- CSS3 -->
           <div class="tech-card">
-            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
               <path d="M4 3L5.7 21L12 22.8L18.3 21L20 3H4Z"
                 stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
               <path d="M15.5 8H8.2L8.5 11H15.2L14.8 16.3L12 17.2L9.2 16.3L9 14.3"
@@ -190,7 +259,7 @@
 
           <!-- JavaScript -->
           <div class="tech-card">
-            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
               <rect x="3" y="3" width="18" height="18" rx="2"
                 stroke="currentColor" stroke-width="1.4"/>
               <path d="M8 15.5C8 16.5 8.6 17 9.5 17C10.4 17 11 16.4 11 15.3V9"
@@ -203,7 +272,7 @@
 
           <!-- Python -->
           <div class="tech-card">
-            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
               <path d="M12 2C9 2 9 4 9 4V7H12H15V8H8C8 8 5 8 5 12C5 16 8 15.5 8 15.5H9.5V13.5C9.5 13.5 9.4 11 12 11H15C15 11 17.5 11 17.5 8.5V5C17.5 5 17.8 2 12 2Z"
                 stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
               <path d="M12 22C15 22 15 20 15 20V17H12H9V16H16C16 16 19 16 19 12C19 8 16 8.5 16 8.5H14.5V10.5C14.5 10.5 14.6 13 12 13H9C9 13 6.5 13 6.5 15.5V19C6.5 19 6.2 22 12 22Z"
@@ -216,7 +285,7 @@
 
           <!-- TypeScript -->
           <div class="tech-card">
-            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
               <rect x="3" y="3" width="18" height="18" rx="2"
                 stroke="currentColor" stroke-width="1.3"/>
               <path d="M7 8H17"
@@ -233,7 +302,7 @@
 
           <!-- Node.js -->
           <div class="tech-card">
-            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
               <path d="M12 2L20 6.5V17.5L12 22L4 17.5V6.5L12 2Z"
                 stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
               <path d="M9 9.5C9 9.5 10 8.5 12 8.5C14 8.5 15 9.5 15 9.5V13C15 13 14 15.5 12 15.5C10 15.5 9 13 9 13V9.5Z"
@@ -244,7 +313,7 @@
 
           <!-- Supabase -->
           <div class="tech-card">
-            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
               <path d="M15 3H7C6 3 5.5 3.7 6.2 4.6L11 11H5C4 11 3.7 11.7 4.4 12.5L13 21L12 13H18C19 13 19.3 12.3 18.7 11.5L15 3Z"
                 stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
             </svg>
@@ -253,7 +322,7 @@
 
           <!-- PHP -->
           <div class="tech-card">
-            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
               <ellipse cx="12" cy="12" rx="9" ry="5.5"
                 stroke="currentColor" stroke-width="1.3"/>
               <path d="M6 12C6 14.8 8.7 17 12 17C15.3 17 18 14.8 18 12"
@@ -268,7 +337,7 @@
 
           <!-- GitHub -->
           <div class="tech-card">
-            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
               <path d="M12 2C6.5 2 2 6.6 2 12.3C2 16.8 4.9 20.6 8.9 22C9.4 22.1 9.5 21.8 9.5 21.5V19.6C6.7 20.2 6.1 18.2 6.1 18.2C5.7 17.1 5.1 16.8 5.1 16.8C4.2 16.2 5.2 16.2 5.2 16.2C6.2 16.3 6.7 17.3 6.7 17.3C7.6 18.8 9 18.4 9.6 18.1C9.7 17.5 9.9 17 10.2 16.8C7.9 16.5 5.6 15.6 5.6 11.7C5.6 10.6 6 9.7 6.7 9C6.6 8.7 6.2 7.7 6.8 6.2C6.8 6.2 7.7 5.9 9.5 7.2C10.3 7 11.2 6.9 12 6.9C12.8 6.9 13.7 7 14.5 7.2C16.3 5.9 17.2 6.2 17.2 6.2C17.8 7.7 17.4 8.7 17.3 9C18 9.7 18.4 10.6 18.4 11.7C18.4 15.6 16.1 16.5 13.8 16.8C14.2 17.1 14.5 17.7 14.5 18.6V21.5C14.5 21.8 14.7 22.1 15.2 22C19.1 20.6 22 16.8 22 12.3C22 6.6 17.5 2 12 2Z"
                 stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
             </svg>
@@ -277,7 +346,7 @@
 
           <!-- APIs -->
           <div class="tech-card">
-            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <svg class="tech-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
               <path d="M9 3H5C3.9 3 3 3.9 3 5V9M15 3H19C20.1 3 21 3.9 21 5V9M9 21H5C3.9 21 3 20.1 3 19V15M15 21H19C20.1 21 21 20.1 21 19V15"
                 stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M8 12H16M8 12L10.5 9.5M8 12L10.5 14.5"
@@ -287,87 +356,83 @@
           </div>
 
         </div>
-
-        </div>
       </div>
     </section>
 
     <!-- ==================================================
          PROJETOS
     ================================================== -->
-    <section class="projects" id="projetos">
+    <section class="projects" id="projetos" aria-labelledby="projetos-titulo" tabindex="-1">
       <div class="container">
 
         <div class="section-head fade-up">
-          <span class="section-head__eyebrow"><span class="section-head__num">04</span> Projetos</span>
-          <h2 class="section-head__title">Coisas que eu construí.</h2>
+          <span class="section-head__eyebrow"><span class="section-head__num" aria-hidden="true">04</span> Projetos</span>
+          <h2 id="projetos-titulo" class="section-head__title">Coisas que eu construí.</h2>
           <p class="section-head__desc">Projetos pessoais, experimentos e aplicações desenvolvidas para aprender, testar ideias e transformar conceitos em produtos reais.</p>
         </div>
 
         <div class="projects__grid">
 
-            </article>
-            <article class="project-card fade-up">
+          <article class="project-card fade-up" aria-labelledby="projeto-nortiva-titulo">
             <div class="project-card__top">
-              <span class="project-card__num">01</span>
+              <span class="project-card__num" aria-hidden="true">01</span>
               <div class="project-card__links">
-                <a href="https://github.com/Nortiva" class="icon-btn" aria-label="Ver repositório do BioPage no GitHub">
-                  <svg class="icon icon--sm" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C6.5 2 2 6.6 2 12.3C2 16.8 4.9 20.6 8.9 22C9.4 22.1 9.5 21.8 9.5 21.5V19.6C6.7 20.2 6.1 18.2 6.1 18.2C5.7 17.1 5.1 16.8 5.1 16.8C4.2 16.2 5.2 16.2 5.2 16.2C6.2 16.3 6.7 17.3 6.7 17.3C7.6 18.8 9 18.4 9.6 18.1C9.7 17.5 9.9 17 10.2 16.8C7.9 16.5 5.6 15.6 5.6 11.7C5.6 10.6 6 9.7 6.7 9C6.6 8.7 6.2 7.7 6.8 6.2C6.8 6.2 7.7 5.9 9.5 7.2C10.3 7 11.2 6.9 12 6.9C12.8 6.9 13.7 7 14.5 7.2C16.3 5.9 17.2 6.2 17.2 6.2C17.8 7.7 17.4 8.7 17.3 9C18 9.7 18.4 10.6 18.4 11.7C18.4 15.6 16.1 16.5 13.8 16.8C14.2 17.1 14.5 17.7 14.5 18.6V21.5C14.5 21.8 14.7 22.1 15.2 22C19.1 20.6 22 16.8 22 12.3C22 6.6 17.5 2 12 2Z" fill="currentColor"/></svg>
+                <a href="https://github.com/Nortiva" class="icon-btn" aria-label="Ver Nortiva no GitHub (abre em nova aba)" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon icon--sm" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C6.5 2 2 6.6 2 12.3C2 16.8 4.9 20.6 8.9 22C9.4 22.1 9.5 21.8 9.5 21.5V19.6C6.7 20.2 6.1 18.2 6.1 18.2C5.7 17.1 5.1 16.8 5.1 16.8C4.2 16.2 5.2 16.2 5.2 16.2C6.2 16.3 6.7 17.3 6.7 17.3C7.6 18.8 9 18.4 9.6 18.1C9.7 17.5 9.9 17 10.2 16.8C7.9 16.5 5.6 15.6 5.6 11.7C5.6 10.6 6 9.7 6.7 9C6.6 8.7 6.2 7.7 6.8 6.2C6.8 6.2 7.7 5.9 9.5 7.2C10.3 7 11.2 6.9 12 6.9C12.8 6.9 13.7 7 14.5 7.2C16.3 5.9 17.2 6.2 17.2 6.2C17.8 7.7 17.4 8.7 17.3 9C18 9.7 18.4 10.6 18.4 11.7C18.4 15.6 16.1 16.5 13.8 16.8C14.2 17.1 14.5 17.7 14.5 18.6V21.5C14.5 21.8 14.7 22.1 15.2 22C19.1 20.6 22 16.8 22 12.3C22 6.6 17.5 2 12 2Z" fill="currentColor"/></svg>
                 </a>
               </div>
             </div>
-            <h3 class="project-card__title">Nortiva</h3>
+            <h3 id="projeto-nortiva-titulo" class="project-card__title">Nortiva</h3>
             <p class="project-card__desc">Construindo soluções digitais modernas com inovação, qualidade e atenção aos detalhes.</p>
             <div class="project-card__tags">
             </div>
-            <a href="https://www.instagram.com/thenortiva/" class="project-card__demo">
+            <a href="https://www.instagram.com/thenortiva/" class="project-card__demo" aria-label="Ver projeto Nortiva no Instagram (abre em nova aba)" target="_blank" rel="noopener noreferrer">
               Ver projeto
-              <svg class="icon icon--sm" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg class="icon icon--sm" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
           </article>
-        
-          </article>
-            <article class="project-card fade-up">
+
+          <article class="project-card fade-up" aria-labelledby="projeto-trazzer-titulo">
             <div class="project-card__top">
-              <span class="project-card__num">02</span>
+              <span class="project-card__num" aria-hidden="true">02</span>
               <div class="project-card__links">
-                <a href="https://github.com/matheusfrdev" class="icon-btn" aria-label="Ver repositório do BioPage no GitHub">
-                  <svg class="icon icon--sm" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C6.5 2 2 6.6 2 12.3C2 16.8 4.9 20.6 8.9 22C9.4 22.1 9.5 21.8 9.5 21.5V19.6C6.7 20.2 6.1 18.2 6.1 18.2C5.7 17.1 5.1 16.8 5.1 16.8C4.2 16.2 5.2 16.2 5.2 16.2C6.2 16.3 6.7 17.3 6.7 17.3C7.6 18.8 9 18.4 9.6 18.1C9.7 17.5 9.9 17 10.2 16.8C7.9 16.5 5.6 15.6 5.6 11.7C5.6 10.6 6 9.7 6.7 9C6.6 8.7 6.2 7.7 6.8 6.2C6.8 6.2 7.7 5.9 9.5 7.2C10.3 7 11.2 6.9 12 6.9C12.8 6.9 13.7 7 14.5 7.2C16.3 5.9 17.2 6.2 17.2 6.2C17.8 7.7 17.4 8.7 17.3 9C18 9.7 18.4 10.6 18.4 11.7C18.4 15.6 16.1 16.5 13.8 16.8C14.2 17.1 14.5 17.7 14.5 18.6V21.5C14.5 21.8 14.7 22.1 15.2 22C19.1 20.6 22 16.8 22 12.3C22 6.6 17.5 2 12 2Z" fill="currentColor"/></svg>
+                <a href="https://github.com/matheusfrdev" class="icon-btn" aria-label="Ver perfil de Matheus Fraga no GitHub (abre em nova aba)" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon icon--sm" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C6.5 2 2 6.6 2 12.3C2 16.8 4.9 20.6 8.9 22C9.4 22.1 9.5 21.8 9.5 21.5V19.6C6.7 20.2 6.1 18.2 6.1 18.2C5.7 17.1 5.1 16.8 5.1 16.8C4.2 16.2 5.2 16.2 5.2 16.2C6.2 16.3 6.7 17.3 6.7 17.3C7.6 18.8 9 18.4 9.6 18.1C9.7 17.5 9.9 17 10.2 16.8C7.9 16.5 5.6 15.6 5.6 11.7C5.6 10.6 6 9.7 6.7 9C6.6 8.7 6.2 7.7 6.8 6.2C6.8 6.2 7.7 5.9 9.5 7.2C10.3 7 11.2 6.9 12 6.9C12.8 6.9 13.7 7 14.5 7.2C16.3 5.9 17.2 6.2 17.2 6.2C17.8 7.7 17.4 8.7 17.3 9C18 9.7 18.4 10.6 18.4 11.7C18.4 15.6 16.1 16.5 13.8 16.8C14.2 17.1 14.5 17.7 14.5 18.6V21.5C14.5 21.8 14.7 22.1 15.2 22C19.1 20.6 22 16.8 22 12.3C22 6.6 17.5 2 12 2Z" fill="currentColor"/></svg>
                 </a>
               </div>
             </div>
-            <h3 class="project-card__title">Trazzer</h3>
+            <h3 id="projeto-trazzer-titulo" class="project-card__title">Trazzer</h3>
             <p class="project-card__desc">Sua presença digital em um só lugar. Organize links, redes sociais e informações importantes em uma página bonita, prática e profissional.</p>
             <div class="project-card__tags">
             </div>
-            <a href="https://trezzer.netlify.app" class="project-card__demo">
+            <a href="https://trezzer.netlify.app" class="project-card__demo" aria-label="Ver projeto Trazzer (abre em nova aba)" target="_blank" rel="noopener noreferrer">
               Ver projeto
-              <svg class="icon icon--sm" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg class="icon icon--sm" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
           </article>
-          
-          <article class="project-card fade-up">
+
+          <article class="project-card fade-up" aria-labelledby="projeto-devtools-titulo">
             <div class="project-card__top">
-              <span class="project-card__num">03</span>
+              <span class="project-card__num" aria-hidden="true">03</span>
               <div class="project-card__links">
-                <a href="https://github.com/matheusfrdev/devtools" class="icon-btn" aria-label="Ver repositório do Nortiva Pay no GitHub">
-                  <svg class="icon icon--sm" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C6.5 2 2 6.6 2 12.3C2 16.8 4.9 20.6 8.9 22C9.4 22.1 9.5 21.8 9.5 21.5V19.6C6.7 20.2 6.1 18.2 6.1 18.2C5.7 17.1 5.1 16.8 5.1 16.8C4.2 16.2 5.2 16.2 5.2 16.2C6.2 16.3 6.7 17.3 6.7 17.3C7.6 18.8 9 18.4 9.6 18.1C9.7 17.5 9.9 17 10.2 16.8C7.9 16.5 5.6 15.6 5.6 11.7C5.6 10.6 6 9.7 6.7 9C6.6 8.7 6.2 7.7 6.8 6.2C6.8 6.2 7.7 5.9 9.5 7.2C10.3 7 11.2 6.9 12 6.9C12.8 6.9 13.7 7 14.5 7.2C16.3 5.9 17.2 6.2 17.2 6.2C17.8 7.7 17.4 8.7 17.3 9C18 9.7 18.4 10.6 18.4 11.7C18.4 15.6 16.1 16.5 13.8 16.8C14.2 17.1 14.5 17.7 14.5 18.6V21.5C14.5 21.8 14.7 22.1 15.2 22C19.1 20.6 22 16.8 22 12.3C22 6.6 17.5 2 12 2Z" fill="currentColor"/></svg>
+                <a href="https://github.com/matheusfrdev/devtools" class="icon-btn" aria-label="Ver repositório do DevTools no GitHub (abre em nova aba)" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon icon--sm" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C6.5 2 2 6.6 2 12.3C2 16.8 4.9 20.6 8.9 22C9.4 22.1 9.5 21.8 9.5 21.5V19.6C6.7 20.2 6.1 18.2 6.1 18.2C5.7 17.1 5.1 16.8 5.1 16.8C4.2 16.2 5.2 16.2 5.2 16.2C6.2 16.3 6.7 17.3 6.7 17.3C7.6 18.8 9 18.4 9.6 18.1C9.7 17.5 9.9 17 10.2 16.8C7.9 16.5 5.6 15.6 5.6 11.7C5.6 10.6 6 9.7 6.7 9C6.6 8.7 6.2 7.7 6.8 6.2C6.8 6.2 7.7 5.9 9.5 7.2C10.3 7 11.2 6.9 12 6.9C12.8 6.9 13.7 7 14.5 7.2C16.3 5.9 17.2 6.2 17.2 6.2C17.8 7.7 17.4 8.7 17.3 9C18 9.7 18.4 10.6 18.4 11.7C18.4 15.6 16.1 16.5 13.8 16.8C14.2 17.1 14.5 17.7 14.5 18.6V21.5C14.5 21.8 14.7 22.1 15.2 22C19.1 20.6 22 16.8 22 12.3C22 6.6 17.5 2 12 2Z" fill="currentColor"/></svg>
                 </a>
               </div>
             </div>
-            <h3 class="project-card__title">DevTools</h3>
+            <h3 id="projeto-devtools-titulo" class="project-card__title">DevTools</h3>
             <p class="project-card__desc">Uma coleção de ferramentas rápidas e gratuitas para facilitar seu desenvolvimento. Gere, valide, converta e teste dados diretamente no navegador.</p>
             <div class="project-card__tags">
               <span class="tag">JavaScript</span>
               <span class="tag">HTML</span>
               <span class="tag">CSS</span>
             </div>
-            <a href="https://matheusfrdev.github.io/devtools/" class="project-card__demo">
+            <a href="https://matheusfrdev.github.io/devtools/" class="project-card__demo" aria-label="Ver projeto DevTools (abre em nova aba)" target="_blank" rel="noopener noreferrer">
               Ver projeto
-              <svg class="icon icon--sm" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg class="icon icon--sm" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
           </article>
-          
+
         </div>
       </div>
     </section>
@@ -375,39 +440,39 @@
     <!-- ==================================================
          DOCUMENTOS (CERTIFICADOS)
     ================================================== -->
-    <section class="certificates" id="documentos">
+    <section class="certificates" id="documentos" aria-labelledby="documentos-titulo" tabindex="-1">
       <div class="container">
 
         <div class="section-head fade-up">
-          <span class="section-head__eyebrow"><span class="section-head__num">05</span> Documentos</span>
-          <h2 class="section-head__title">Conhecimento que estou construindo.</h2>
+          <span class="section-head__eyebrow"><span class="section-head__num" aria-hidden="true">05</span> Documentos</span>
+          <h2 id="documentos-titulo" class="section-head__title">Conhecimento que estou construindo.</h2>
           <p class="section-head__desc">Cursos, certificações e aprendizados que fazem parte da minha evolução como desenvolvedor.</p>
         </div>
 
         <div class="certificates__grid fade-up delay-1">
 
           <div class="cert-card">
-            <svg class="cert-card__icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L14.5 8.5L21 9.2L16 13.5L17.5 20L12 16.5L6.5 20L8 13.5L3 9.2L9.5 8.5L12 2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            <svg class="cert-card__icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2L14.5 8.5L21 9.2L16 13.5L17.5 20L12 16.5L6.5 20L8 13.5L3 9.2L9.5 8.5L12 2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
             <h3 class="cert-card__name">Python</h3>
             <span class="cert-card__year">2026</span>
             <p class="cert-card__inst">CURSO DE PYTHON / FUNDAÇÃO BRADESCO</p>
-            <a href="certificados/python.pdf" target="_blank" rel="noopener noreferrer" class="cert-card__link">
+            <a href="certificados/python.pdf" aria-label="Ver certificado de Python (PDF, abre em nova aba)" target="_blank" rel="noopener noreferrer" class="cert-card__link">
               Ver certificado
-              <svg class="icon icon--sm" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg class="icon icon--sm" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
           </div>
 
           <div class="cert-card">
-            <svg class="cert-card__icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L14.5 8.5L21 9.2L16 13.5L17.5 20L12 16.5L6.5 20L8 13.5L3 9.2L9.5 8.5L12 2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            <svg class="cert-card__icon" width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2L14.5 8.5L21 9.2L16 13.5L17.5 20L12 16.5L6.5 20L8 13.5L3 9.2L9.5 8.5L12 2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
             <h3 class="cert-card__name">PHP</h3>
             <span class="cert-card__year">2026</span>
             <p class="cert-card__inst">CURSO DE PHP BÁSICO / CURSO EM VÍDEO</p>
-            <a href="certificados/php.pdf" target="_blank" rel="noopener noreferrer" class="cert-card__link">
+            <a href="certificados/php.pdf" aria-label="Ver certificado de PHP (PDF, abre em nova aba)" target="_blank" rel="noopener noreferrer" class="cert-card__link">
               Ver certificado
-              <svg class="icon icon--sm" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg class="icon icon--sm" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
           </div>
-          
+
         </div>
 
       </div>
@@ -416,33 +481,33 @@
     <!-- ==================================================
          CONTATO
     ================================================== -->
-    <section class="contact" id="contato">
+    <section class="contact" id="contato" aria-labelledby="contato-titulo" tabindex="-1">
       <div class="container">
 
         <div class="section-head section-head--center fade-up">
-          <span class="section-head__eyebrow"><span class="section-head__num">06</span> Contato</span>
-          <h2 class="section-head__title">Vamos construir algo juntos?</h2>
+          <span class="section-head__eyebrow"><span class="section-head__num" aria-hidden="true">06</span> Contato</span>
+          <h2 id="contato-titulo" class="section-head__title">Vamos construir algo juntos?</h2>
           <p class="section-head__desc">Tem uma ideia, projeto ou simplesmente quer trocar uma ideia sobre tecnologia? Me encontre por aqui.</p>
         </div>
 
         <div class="contact__links fade-up delay-1">
 
-          <a href="https://github.com/matheusfrdev" target="_blank" rel="noopener noreferrer" class="contact-card">
-            <svg class="contact-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C6.5 2 2 6.6 2 12.3C2 16.8 4.9 20.6 8.9 22C9.4 22.1 9.5 21.8 9.5 21.5V19.6C6.7 20.2 6.1 18.2 6.1 18.2C5.7 17.1 5.1 16.8 5.1 16.8C4.2 16.2 5.2 16.2 5.2 16.2C6.2 16.3 6.7 17.3 6.7 17.3C7.6 18.8 9 18.4 9.6 18.1C9.7 17.5 9.9 17 10.2 16.8C7.9 16.5 5.6 15.6 5.6 11.7C5.6 10.6 6 9.7 6.7 9C6.6 8.7 6.2 7.7 6.8 6.2C6.8 6.2 7.7 5.9 9.5 7.2C10.3 7 11.2 6.9 12 6.9C12.8 6.9 13.7 7 14.5 7.2C16.3 5.9 17.2 6.2 17.2 6.2C17.8 7.7 17.4 8.7 17.3 9C18 9.7 18.4 10.6 18.4 11.7C18.4 15.6 16.1 16.5 13.8 16.8C14.2 17.1 14.5 17.7 14.5 18.6V21.5C14.5 21.8 14.7 22.1 15.2 22C19.1 20.6 22 16.8 22 12.3C22 6.6 17.5 2 12 2Z" fill="currentColor"/></svg>
+          <a href="https://github.com/matheusfrdev" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="GitHub de Matheus Fraga (abre em nova aba)">
+            <svg class="contact-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C6.5 2 2 6.6 2 12.3C2 16.8 4.9 20.6 8.9 22C9.4 22.1 9.5 21.8 9.5 21.5V19.6C6.7 20.2 6.1 18.2 6.1 18.2C5.7 17.1 5.1 16.8 5.1 16.8C4.2 16.2 5.2 16.2 5.2 16.2C6.2 16.3 6.7 17.3 6.7 17.3C7.6 18.8 9 18.4 9.6 18.1C9.7 17.5 9.9 17 10.2 16.8C7.9 16.5 5.6 15.6 5.6 11.7C5.6 10.6 6 9.7 6.7 9C6.6 8.7 6.2 7.7 6.8 6.2C6.8 6.2 7.7 5.9 9.5 7.2C10.3 7 11.2 6.9 12 6.9C12.8 6.9 13.7 7 14.5 7.2C16.3 5.9 17.2 6.2 17.2 6.2C17.8 7.7 17.4 8.7 17.3 9C18 9.7 18.4 10.6 18.4 11.7C18.4 15.6 16.1 16.5 13.8 16.8C14.2 17.1 14.5 17.7 14.5 18.6V21.5C14.5 21.8 14.7 22.1 15.2 22C19.1 20.6 22 16.8 22 12.3C22 6.6 17.5 2 12 2Z" fill="currentColor"/></svg>
             <span>GitHub</span>
-            <svg class="icon icon--sm contact-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="icon icon--sm contact-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
 
-          <a href="https://instagram.com/fragaxyz" target="_blank" rel="noopener noreferrer" class="contact-card">
-            <svg class="contact-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg>
+          <a href="https://instagram.com/fragaxyz" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="Instagram de Matheus Fraga (abre em nova aba)">
+            <svg class="contact-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg>
             <span>Instagram</span>
-            <svg class="icon icon--sm contact-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="icon icon--sm contact-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
 
-          <a href="mailto:matheusfrdev@gmail.com" class="contact-card">
-            <svg class="contact-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M4 7L12 13L20 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <a href="mailto:matheusfrdev@gmail.com" class="contact-card" aria-label="Email: enviar mensagem para matheusfrdev@gmail.com">
+            <svg class="contact-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M4 7L12 13L20 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <span>Email</span>
-            <svg class="icon icon--sm contact-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="icon icon--sm contact-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 17L17 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7H17V16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
 
         </div>
@@ -463,13 +528,115 @@
   <!-- ==================================================
        BOTÃO FLUTUANTE — VOLTAR AO TOPO
   ================================================== -->
-  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
-    <svg class="icon icon--sm" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <svg class="icon icon--sm" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
       <path d="M12 19V5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
       <path d="M6 11L12 5L18 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </button>
 
   <script src="script.js"></script>
+  <!-- Complementa script.js; mantém os arquivos CSS e JS existentes. -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.getElementById('header');
+      const toggle = document.getElementById('menuToggle');
+      const menu = document.getElementById('mobileMenu');
+      const mobile = window.matchMedia('(max-width: 1080px)');
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const navLinks = document.querySelectorAll('[data-nav]');
+
+      const closeMenu = () => {
+        menu.classList.remove('is-open');
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Abrir menu');
+      };
+
+      const syncMenu = () => {
+        const open = mobile.matches && toggle.getAttribute('aria-expanded') === 'true';
+        if (!open && menu.contains(document.activeElement)) {
+          const activeLink = document.activeElement;
+          const desktopLink = Array.from(navLinks).find((link) =>
+            !menu.contains(link) && link.dataset.nav === activeLink.dataset.nav
+          );
+          (mobile.matches ? toggle : desktopLink || document.querySelector('.logo')).focus();
+        }
+        menu.inert = !open;
+      };
+
+      syncMenu();
+      new MutationObserver(syncMenu).observe(toggle, {
+        attributes: true,
+        attributeFilter: ['aria-expanded']
+      });
+
+      mobile.addEventListener('change', () => {
+        const wasOpen = toggle.getAttribute('aria-expanded') === 'true';
+        closeMenu();
+        syncMenu();
+        if (!mobile.matches && wasOpen) {
+          document.querySelector('.logo').focus();
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+          closeMenu();
+          toggle.focus();
+        }
+      });
+
+      const syncCurrentLink = () => {
+        navLinks.forEach((link) => {
+          if (link.classList.contains('is-active')) {
+            link.setAttribute('aria-current', 'location');
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        });
+      };
+
+      syncCurrentLink();
+      const navObserver = new MutationObserver(syncCurrentLink);
+      navLinks.forEach((link) => navObserver.observe(link, {
+        attributes: true,
+        attributeFilter: ['class']
+      }));
+
+      // Move o foco junto com a navegação e respeita a redução de movimento.
+      document.addEventListener('click', (event) => {
+        if (!(event.target instanceof Element)) return;
+        const anchor = event.target.closest('a[href^="#"]');
+        if (!anchor || event.button !== 0) return;
+        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) {
+          event.stopPropagation();
+          return;
+        }
+
+        const hash = anchor.getAttribute('href');
+        const target = document.getElementById(hash.slice(1));
+        if (!target) return;
+
+        event.preventDefault();
+        event.stopPropagation();
+        closeMenu();
+        target.focus({ preventScroll: true });
+        window.scrollTo({
+          top: Math.max(0, target.getBoundingClientRect().top + window.scrollY - header.offsetHeight + 1),
+          behavior: reducedMotion.matches ? 'instant' : 'smooth'
+        });
+        if (window.location.hash !== hash) {
+          window.history.pushState(null, '', hash);
+        }
+      }, true);
+
+      document.getElementById('backToTop').addEventListener('click', (event) => {
+        event.stopImmediatePropagation();
+        document.getElementById('inicio').focus({ preventScroll: true });
+        window.scrollTo({ top: 0, behavior: reducedMotion.matches ? 'instant' : 'smooth' });
+      }, true);
+    });
+  </script>
 </body>
 </html>
