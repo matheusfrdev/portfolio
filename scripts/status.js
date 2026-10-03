@@ -4,22 +4,21 @@ const ROUTINE_CONFIG = {
   timeZone: 'America/Sao_Paulo',
   manualStatus: '',
   weekday: [
-    { start: '00:00', text: 'Dormindo' },
-    { start: '05:45', text: 'Começando o dia' },
-    { start: '07:10', text: 'Na escola' },
-    { start: '12:10', text: 'Almoçando e descansando' },
-    { start: '13:30', text: 'Estudando' },
-    { start: '14:30', text: 'Trabalhando nos projetos' },
-    { start: '15:30', text: 'Me preparando para treinar' },
-    { start: '16:00', text: 'Na academia' },
-    { start: '18:00', text: 'Recarregando as energias' },
-    { start: '19:30', text: 'Projetos ou tempo livre' },
-    { start: '21:30', text: 'Relaxando' },
-    { start: '22:30', text: 'Dormindo' }
+    { start: '00:00', text: '💤' },
+    { start: '05:45', text: 'bom dia!☀️' },
+    { start: '07:10', text: 'estudando 📚' },
+    { start: '12:10', text: 'almoçandoo 🍽️' },
+    { start: '13:30', text: 'estudos 📖' },
+    { start: '14:30', text: 'projetos 💻' },
+    { start: '16:00', text: 'academia 💪' },
+    { start: '18:00', text: 'descansando 🏠' },
+    { start: '19:30', text: 'curtindo a noite 🎧' },
+    { start: '21:30', text: 'relaxando 🌙' },
+    { start: '22:30', text: '💤' }
   ],
-  // Sem uma rotina de fim de semana definida, mostramos uma mensagem geral.
+  // aqui vai sempre ser atualizado quando eu for fazer alguma coisa no fim de semana
   weekend: [
-    { start: '00:00', text: 'Tempo livre' }
+    { start: '00:00', text: 'fim de semana 🥳🎉' },
   ]
 };
 
