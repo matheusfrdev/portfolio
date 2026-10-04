@@ -5,6 +5,12 @@ setTheme(preference==='light');
 theme.addEventListener('click',()=>{const light=!document.body.classList.contains('light');setTheme(light);try{localStorage.setItem('mf-theme',light?'light':'dark');}catch{}});
 
 const projectDetails = {
+  maracaki: {
+    title: 'Maracaki', category: 'Software & Micro-SaaS', image: 'https://raw.githubusercontent.com/Maracaki/Site/f4178a0ca8e3509266776ca70e6c0dc079381fb1/img/robo-maracaki.webp',
+    description: ['Empresa de software voltada a criar sistemas inteligentes e soluções Micro-SaaS para o mercado comercial.'],
+    features: ['Sistemas inteligentes', 'Soluções Micro-SaaS', 'Software para o mercado comercial'],
+    links: [{ text: 'Conhecer a Maracaki no GitHub', url: 'https://github.com/Maracaki' }]
+  },
   nortiva: {
     title: 'Nortiva', category: 'Sites & design', image: 'images/nortiva.png',
     description: [
@@ -50,6 +56,7 @@ function openProject(key) {
   image.src = project.image;
   image.classList.toggle('nortiva-image', key === 'nortiva');
   image.classList.toggle('patodevs-image', key === 'patodevs');
+  image.classList.toggle('maracaki-image', key === 'maracaki');
   image.alt = 'Apresentação do projeto ' + project.title;
   document.getElementById('dialog-description').replaceChildren(...project.description.map(text => {
     const p = document.createElement('p'); p.textContent = text; return p;
@@ -145,3 +152,4 @@ if ('IntersectionObserver' in window && !reducedMotion.matches) {
     }
   });
 }
+
