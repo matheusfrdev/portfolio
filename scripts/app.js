@@ -7,8 +7,11 @@ theme.addEventListener('click',()=>{const light=!document.body.classList.contain
 const projectDetails = {
   maracaki: {
     title: 'Maracaki', category: 'Software & Micro-SaaS', image: 'https://raw.githubusercontent.com/Maracaki/Site/f4178a0ca8e3509266776ca70e6c0dc079381fb1/img/robo-maracaki.webp',
-    description: ['Empresa de software voltada a criar sistemas inteligentes e soluções Micro-SaaS para o mercado comercial.'],
-    features: ['Sistemas inteligentes', 'Soluções Micro-SaaS', 'Software para o mercado comercial'],
+    description: [
+      'A Maracaki é uma empresa de software voltada à criação de sistemas inteligentes e soluções Micro-SaaS para o mercado comercial. A proposta é transformar necessidades reais dos negócios em ferramentas digitais práticas, com foco em simplificar processos e apoiar a rotina de quem empreende.',
+      'Cada solução parte de um problema específico: reduzir tarefas repetitivas, organizar informações ou facilitar atividades do dia a dia. A ideia é desenvolver sistemas com uma finalidade clara e interfaces fáceis de usar, aproximando a tecnologia das necessidades de cada negócio.'
+    ],
+    features: ['Sistemas inteligentes voltados a necessidades reais', 'Micro-SaaS com foco em problemas específicos', 'Simplificação de processos e tarefas do dia a dia', 'Interfaces práticas para o mercado comercial'],
     links: [{ text: 'Conhecer a Maracaki no GitHub', url: 'https://github.com/Maracaki' }]
   },
   nortiva: {
