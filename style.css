@@ -589,6 +589,31 @@ dialog {
   box-shadow: 0 25px 100px #0006;
 }
 
+/* Entrada dos detalhes ao clicar em qualquer card. */
+dialog[open] {
+  animation: project-dialog-enter 240ms cubic-bezier(.2,.8,.2,1);
+}
+
+dialog[open]::backdrop {
+  animation: project-backdrop-enter 240ms ease-out;
+}
+
+@keyframes project-dialog-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes project-backdrop-enter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 dialog::backdrop {
   background: #000a;
   backdrop-filter: blur(5px);
@@ -876,7 +901,8 @@ body.dialog-open {
     scroll-behavior: auto;
   }
 
-  * {
+  *, *::before, *::after, dialog::backdrop {
+    animation: none !important;
     transition: none !important;
   }
 
