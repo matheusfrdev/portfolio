@@ -386,7 +386,7 @@ h1 span {
 
 .project-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -397,7 +397,8 @@ h1 span {
   border-radius: var(--radius);
   min-width: 0;
   transition: transform 180ms ease-out,border-color 180ms ease-out;
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   overflow: hidden;
   text-align: left;
@@ -429,8 +430,10 @@ h1 span {
 }
 
 .project-body {
-  display: block;
-  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 22px 20px;
 }
 
 .project-name {
@@ -448,13 +451,14 @@ h1 span {
   line-height: 1.7;
   margin-top: 8px;
   min-height: 48px;
+  margin-bottom: 20px;
 }
 
 .project-more {
   display: flex;
   color: var(--accent);
   font-size: 12px;
-  margin-top: 20px;
+  margin-top: auto;
   align-items: center;
   justify-content: space-between;
   border-top: 1px solid var(--line);
@@ -719,6 +723,20 @@ body.dialog-open {
 
 /* Responsividade: ajustes agrupados por tamanho de tela. */
 
+/* Mascote oficial da Maracaki, preservado sem cortes. */
+.project[data-project="maracaki"] .project-photo,
+#dialog-image.maracaki-image {
+  object-fit: contain;
+  padding: 16px;
+  background: #171719;
+}
+
+@media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 600px) {
   .page {
     width: calc(100% - 40px);
@@ -883,3 +901,4 @@ body.dialog-open {
   }
 
 }
+
