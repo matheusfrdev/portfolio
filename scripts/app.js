@@ -5,15 +5,6 @@ setTheme(preference==='light');
 theme.addEventListener('click',()=>{const light=!document.body.classList.contains('light');setTheme(light);try{localStorage.setItem('mf-theme',light?'light':'dark');}catch{}});
 
 const projectDetails = {
-  maracaki: {
-    title: 'Maracaki', category: 'Software & Micro-SaaS', image: 'https://raw.githubusercontent.com/Maracaki/Site/f4178a0ca8e3509266776ca70e6c0dc079381fb1/img/robo-maracaki.webp',
-    description: [
-      'A Maracaki é uma empresa de software voltada à criação de sistemas inteligentes e soluções Micro-SaaS para o mercado comercial. A proposta é transformar necessidades reais dos negócios em ferramentas digitais práticas, com foco em simplificar processos e apoiar a rotina de quem empreende.',
-      'Cada solução parte de um problema específico: reduzir tarefas repetitivas, organizar informações ou facilitar atividades do dia a dia. A ideia é desenvolver sistemas com uma finalidade clara e interfaces fáceis de usar, aproximando a tecnologia das necessidades de cada negócio.'
-    ],
-    features: ['Sistemas inteligentes voltados a necessidades reais', 'Micro-SaaS com foco em problemas específicos', 'Simplificação de processos e tarefas do dia a dia', 'Interfaces práticas para o mercado comercial'],
-    links: [{ text: 'Conhecer a Maracaki no GitHub', url: 'https://github.com/Maracaki' }]
-  },
   nortiva: {
     title: 'Nortiva', category: 'Sites & design', image: 'images/nortiva.png',
     description: [
@@ -21,6 +12,25 @@ const projectDetails = {
     ],
     features: ['Landing pages e sites institucionais', 'Automações web sob medida', 'Valorização de cada negócio e facilidade de contato com possíveis clientes'],
     links: [{ text: 'Conhecer a Nortiva', url: 'https://www.instagram.com/thenortiva/' }, { text: 'GitHub', url: 'https://github.com/Nortiva' }]
+  },
+
+  maracaki: {
+    title: 'Maracaki', category: 'Software & Micro-SaaS', image: 'https://raw.githubusercontent.com/Maracaki/Site/f4178a0ca8e3509266776ca70e6c0dc079381fb1/img/robo-maracaki.webp',
+    description: [
+      'A Maracaki é uma empresa de software voltada à criação de sistemas inteligentes e soluções Micro-SaaS para o mercado comercial. A proposta é transformar necessidades reais dos negócios em ferramentas digitais práticas, com foco em simplificar processos e apoiar a rotina de quem empreende.',
+      'Cada solução parte de um problema específico: reduzir tarefas repetitivas, organizar informações ou facilitar atividades do dia a dia. A ideia é desenvolver sistemas com uma finalidade clara e interfaces fáceis de usar, aproximando a tecnologia das necessidades de cada negócio.'
+    ],
+    features: ['Sistemas inteligentes voltados a necessidades reais', 'Micro-SaaS com foco em problemas específicos', 'Simplificação de processos e tarefas do dia a dia', 'Interfaces práticas para o mercado comercial'],
+    links: [{ text: 'Conhecer a Maracaki', url: 'https://maracaki.github.io/Site/' }, { text: 'GitHub', url: 'https://github.com/Maracaki' }]
+  },
+
+  patodevs: {
+  title: 'PatoDevs', category: 'Comunidade de desenvolvedores', image: 'images/patodevs.png',
+  description: [
+    'Uma comunidade de desenvolvedores para compartilhar conhecimento, conectar ideias e construir projetos juntos.'
+  ],
+  features: ['Compartilhamento de conhecimento', 'Conexão entre desenvolvedores e ideias', 'Construção de projetos em comunidade'],
+  links: [{ text: 'Conhecer o PatoDevs', url: 'https://patodevs.vercel.app/' }, { text: 'GitHub', url: 'https://github.com/PatoDevs' }]
   },
   trezzer: {
     title: 'Trezzer', category: 'Links & presença digital', image: 'images/trezzer.png',
@@ -40,14 +50,15 @@ const projectDetails = {
     features: ['Produtos organizados por categorias', 'Carrinho com quantidades e total do pedido', 'Entrega ou retirada e envio pelo WhatsApp', 'Configuração de produtos e personalização visual'],
     links: [{ text: 'Ver projeto', url: 'https://matheusfrdev.github.io/cardapio-digital/' }, { text: 'GitHub', url: 'https://github.com/matheusfrdev/cardapio-digital' }]
   },
-  patodevs: {
-    title: 'PatoDevs', category: 'Comunidade de desenvolvedores', image: 'images/patodevs.png',
-    description: [
-      'Uma comunidade de desenvolvedores para compartilhar conhecimento, conectar ideias e construir projetos juntos.'
-    ],
-    features: ['Compartilhamento de conhecimento', 'Conexão entre desenvolvedores e ideias', 'Construção de projetos em comunidade'],
-    links: [{ text: 'Conhecer o PatoDevs', url: 'https://patodevs.vercel.app/' }, { text: 'GitHub', url: 'https://github.com/PatoDevs' }]
-  }
+  roddi: {
+  title: 'Roddi', category: 'Aplicativo para entregadores', image: 'images/roddi.png',
+  description: [
+    'Um aplicativo em desenvolvimento para facilitar a rotina de entregadores. A proposta reúne organização de entregas, acesso aos destinos e controle de ganhos e gastos em uma interface simples, pensada para celular.',
+    'O projeto possui identidade visual própria e prevê armazenamento dos registros no aparelho, sem necessidade de conta, com opções de backup. A versão web será a base para uma futura adaptação para Android.'
+  ],
+  features: ['Organização e acompanhamento de entregas', 'Acesso aos destinos pelo Google Maps', 'Controle de ganhos e gastos do turno', 'Armazenamento local e backup planejados'],
+  links: [{ text: 'Ver projeto', url: 'https://github.com/matheusfrdev/roddi' }]
+}
 };
 const dialog = document.getElementById('project-dialog');
 function openProject(key) {
@@ -155,4 +166,3 @@ if ('IntersectionObserver' in window && !reducedMotion.matches) {
     }
   });
 }
-
