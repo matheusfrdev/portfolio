@@ -9,11 +9,11 @@ const ROUTINE_CONFIG = {
     { start: '07:10', text: 'estudando.. 📚' },
     { start: '12:10', text: 'almoçando.. 🍽️' },
     { start: '13:30', text: 'nos estudos.. 📖' },
-    { start: '14:30', text: 'projetos 💻' },
-    { start: '16:00', text: 'academia 💪' },
-    { start: '18:00', text: 'descansando 🏠' },
-    { start: '19:30', text: 'curtindo a noite 🎧' },
-    { start: '21:30', text: 'relaxando 🌙' },
+    { start: '14:30', text: 'projetos.. 💻' },
+    { start: '16:00', text: 'academia.. 💪' },
+    { start: '18:00', text: 'descansando.. 🏠' },
+    { start: '19:30', text: 'curtindo a noite.. 🎧' },
+    { start: '21:30', text: 'relaxando.. 🌙' },
     { start: '22:30', text: '💤' }
   ],
   // aqui vai sempre ser atualizado quando eu for fazer alguma coisa no fim de semana
