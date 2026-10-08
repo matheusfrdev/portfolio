@@ -928,3 +928,90 @@ body.dialog-open {
 
 }
 
+/* 404 */
+.estrutura-erro {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+.conteudo-erro {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 0 64px;
+  text-align: center;
+}
+.etiqueta-erro {
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  background: var(--card);
+  border-radius: 100px;
+  padding: 5px 14px;
+}
+.numero-erro {
+  font-size: clamp(100px, 24vw, 220px);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -.065em;
+  margin: 18px 0 16px;
+  color: var(--text);
+  user-select: none;
+}
+.numero-erro span { color: var(--accent); }
+.conteudo-erro h1 {
+  max-width: 620px;
+  font-size: clamp(26px, 4vw, 38px);
+  letter-spacing: -1px;
+}
+.descricao-erro {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: 18px;
+  max-width: 460px;
+}
+.acoes-erro {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+.botao-erro {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 46px;
+  padding: 10px 18px;
+  border-radius: 9px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--text);
+  font-size: 14px;
+  transition: border-color .2s, transform .2s;
+}
+.botao-erro:hover { border-color: var(--accent); }
+.principal-erro { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 600; }
+.principal-erro:hover { color: var(--bg); transform: translateY(-2px); }
+@media (max-width: 520px) {
+  .pagina-erro .page { width: calc(100% - 32px); }
+  .pagina-erro header { gap: 12px; }
+  .pagina-erro nav { gap: 12px; font-size: 13px; }
+  .conteudo-erro { padding: 32px 0 44px; }
+  .descricao-erro { font-size: 15px; }
+  .acoes-erro { width: 100%; }
+}
+@media (max-width: 360px) {
+  .pagina-erro nav a:first-child { display: none; }
+  .acoes-erro { flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .botao-erro { transition: none; }
+  .principal-erro:hover { transform: none; }
+}
