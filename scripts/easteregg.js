@@ -26,8 +26,8 @@
       <h2 id="secret-title">Dev em modo férias 😎</h2>
 
       <p id="secret-message">
-        Até quem programa precisa descansar.
-        Por aqui, o único loop é sol, descanso e repetir.
+      Se você me viu fazendo alguma coisa, 
+      foi sem querer. Tô de férias. 
       </p>
 
       <button type="button" class="secret-close" autofocus>
@@ -35,7 +35,6 @@
         <span aria-hidden="true">↗</span>
       </button>
 
-      <small>Também vale apertar Esc.</small>
     </div>
   `;
 
