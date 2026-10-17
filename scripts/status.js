@@ -1,6 +1,6 @@
 const ROUTINE_CONFIG = {
   timeZone: 'America/Sao_Paulo',
-  ferias: true, // true = férias | false = rotina normal
+  ferias: false, // true = férias | false = rotina normal
   textoFerias: 'de férias.. 🌴☀️',
   manualStatus: '',
   weekday: [
